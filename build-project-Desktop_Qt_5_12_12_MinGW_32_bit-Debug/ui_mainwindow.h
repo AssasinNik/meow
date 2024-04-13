@@ -37,6 +37,7 @@ public:
         MainWindow->resize(921, 511);
         MainWindow->setMinimumSize(QSize(921, 511));
         MainWindow->setMaximumSize(QSize(921, 511));
+        MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
@@ -63,7 +64,8 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(20, 0, 801, 131));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
-"font: 75 65pt \"Karla\" bold;"));
+"font: 75 65pt \"Karla\" bold;\n"
+"font-weight: 500;"));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(20, 120, 691, 41));

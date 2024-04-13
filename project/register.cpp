@@ -1,37 +1,37 @@
-#include "login.h"
-#include "ui_login.h"
+#include "register.h"
+#include "ui_register.h"
 #include "mainwindow.h"
 
-Login::Login(QWidget *parent) :
+Register::Register(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::Login)
+    ui(new Ui::Register)
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    ui->lineEdit->setEchoMode(QLineEdit::Password);
+    ui->lineEdit_5->setEchoMode(QLineEdit::Password);
+    ui->comboBox->addItem("Студент");
+    ui->comboBox->addItem("Преподаватель");
 }
 
-Login::~Login()
+
+Register::~Register()
 {
     delete ui;
 }
 
-void Login::on_pushButton_2_clicked()
+void Register::on_pushButton_2_clicked()
 {
     close();
 }
 
 
-void Login::on_pushButton_3_clicked()
+void Register::on_pushButton_3_clicked()
 {
     showMinimized();
 }
 
-void Login::on_lineEdit_cursorPositionChanged(int, int){
 
-}
-
-void Login::on_pushButton_4_clicked()
+void Register::on_pushButton_4_clicked()
 {
     auto *mainWindow = new MainWindow();  // Создать окно логина
     mainWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии

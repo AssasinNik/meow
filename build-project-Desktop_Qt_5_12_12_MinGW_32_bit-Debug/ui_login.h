@@ -10,6 +10,7 @@
 #define UI_LOGIN_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -29,6 +30,7 @@ public:
     QLabel *label_3;
     QLineEdit *lineEdit;
     QLineEdit *lineEdit_2;
+    QPushButton *pushButton_4;
 
     void setupUi(QWidget *Login)
     {
@@ -42,7 +44,8 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(380, 10, 151, 71));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
-"font: 75 48pt \"Karla\" bold;"));
+"font: 75 48pt \"Karla\" bold;\n"
+"font-weight: 500;"));
         pushButton_2 = new QPushButton(Login);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(890, 10, 20, 20));
@@ -84,7 +87,8 @@ public:
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(260, 110, 121, 31));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 75 18pt \"Karla\";"));
+"font: 75 18pt \"Karla\";\n"
+""));
         label_3 = new QLabel(Login);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(260, 220, 101, 31));
@@ -93,9 +97,28 @@ public:
         lineEdit = new QLineEdit(Login);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         lineEdit->setGeometry(QRect(260, 270, 361, 41));
+        lineEdit->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
+"font: 14pt \"Karla\";\n"
+"padding-left: 10px;\n"
+"padding-right:10px;\n"
+"border: 2px solid #6D55FF;"));
         lineEdit_2 = new QLineEdit(Login);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
         lineEdit_2->setGeometry(QRect(260, 160, 361, 41));
+        lineEdit_2->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
+"font: 14pt \"Karla\";\n"
+"padding-left: 10px;\n"
+"padding-right:10px;\n"
+"border: 2px solid #6D55FF;\n"
+""));
+        pushButton_4 = new QPushButton(Login);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(20, 10, 61, 51));
+        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/new/prefix1/return.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_4->setIcon(icon);
+        pushButton_4->setIconSize(QSize(35, 35));
 
         retranslateUi(Login);
 
@@ -117,6 +140,7 @@ public:
         pushButton->setText(QApplication::translate("Login", "\320\222\320\276\320\271\321\202\320\270", nullptr));
         label_2->setText(QApplication::translate("Login", "\320\237\320\276\321\207\321\202\320\260", nullptr));
         label_3->setText(QApplication::translate("Login", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
+        pushButton_4->setText(QString());
     } // retranslateUi
 
 };

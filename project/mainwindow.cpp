@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "login.h"
+#include "register.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,6 +19,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    auto *RegisterWindow = new Register();  // Создать окно логина
+    RegisterWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    RegisterWindow->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
 }
 
 

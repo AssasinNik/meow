@@ -1,29 +1,20 @@
-#ifndef LOGIN_H
-#define LOGIN_H
+#ifndef REGISTER_H
+#define REGISTER_H
 
 #include <QWidget>
 #include <QMouseEvent>
+
 namespace Ui {
-class Login;
+class Register;
 }
 
-class Login : public QWidget
+class Register : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Login(QWidget *parent = nullptr);
-    ~Login();
-
-
-private slots:
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-    void on_lineEdit_cursorPositionChanged(int arg1, int arg2);
-
-    void on_pushButton_4_clicked();
-
+    explicit Register(QWidget *parent = nullptr);
+    ~Register();
 protected:
     void mousePressEvent(QMouseEvent *event) override {
         // Запомнить начальную позицию при нажатии на кнопку мыши
@@ -49,10 +40,17 @@ protected:
             event->accept();
         }
     }
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
-    Ui::Login *ui;
+    Ui::Register *ui;
     bool m_dragging = false;
     QPoint m_dragPosition;
 };
 
-#endif // LOGIN_H
+#endif // REGISTER_H

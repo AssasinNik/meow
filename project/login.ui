@@ -173,6 +173,13 @@ font: 75 18pt &quot;Karla&quot;;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 15px; 
+font: 14pt &quot;Karla&quot;;
+padding-left: 10px;
+padding-right:10px;
+border: 2px solid #6D55FF;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
@@ -183,8 +190,44 @@ font: 75 18pt &quot;Karla&quot;;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 15px; 
+font: 14pt &quot;Karla&quot;;
+padding-left: 10px;
+padding-right:10px;
+border: 2px solid #6D55FF;
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>61</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="greeting.qrc">
+     <normaloff>:/new/prefix1/return.png</normaloff>:/new/prefix1/return.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>35</width>
+     <height>35</height>
+    </size>
+   </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="greeting.qrc"/>
+ </resources>
  <connections/>
 </ui>
