@@ -111,9 +111,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-#ifndef QT_NO_TOOLTIP
-        pushButton->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p><br/></p></body></html>", nullptr));
-#endif // QT_NO_TOOLTIP
         pushButton->setText(QApplication::translate("MainWindow", "\320\227\320\260\321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));
         label->setText(QString());
         label_2->setText(QApplication::translate("MainWindow", "\320\235\320\260\321\203\321\207\320\275\320\260\321\217 \320\241\321\204\320\265\321\200\320\260", nullptr));

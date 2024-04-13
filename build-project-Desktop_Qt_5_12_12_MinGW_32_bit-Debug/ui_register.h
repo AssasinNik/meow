@@ -218,9 +218,6 @@ public:
         pushButton_3->setText(QString());
         label_2->setText(QApplication::translate("Register", "\320\230\320\274\321\217", nullptr));
         pushButton_4->setText(QString());
-#ifndef QT_NO_TOOLTIP
-        pushButton->setToolTip(QApplication::translate("Register", "<html><head/><body><p><br/></p></body></html>", nullptr));
-#endif // QT_NO_TOOLTIP
         pushButton->setText(QApplication::translate("Register", "\320\227\320\260\321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));
         pushButton_5->setText(QString());
         label_3->setText(QApplication::translate("Register", "\320\244\320\260\320\274\320\270\320\273\320\270\321\217", nullptr));

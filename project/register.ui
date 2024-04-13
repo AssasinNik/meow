@@ -151,9 +151,6 @@ font: 75 18pt &quot;Karla&quot;;
      <height>61</height>
     </rect>
    </property>
-   <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
