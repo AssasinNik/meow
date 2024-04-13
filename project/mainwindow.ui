@@ -93,7 +93,8 @@ QPushButton:pressed{
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(109, 85, 255);
-font: 75 65pt &quot;Karla&quot; bold;</string>
+font: 75 65pt &quot;Karla&quot; bold;
+font-weight: 500;</string>
     </property>
     <property name="text">
      <string>Научная Сфера</string>

@@ -58,7 +58,7 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(480, 160, 531, 401));
-        label->setPixmap(QPixmap(QString::fromUtf8("C:/Users/nikit/Downloads/greeting.png")));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/new/prefix1/greeting.png")));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(20, 0, 801, 131));
