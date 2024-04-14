@@ -47,6 +47,8 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Register *ui;
     bool m_dragging = false;
