@@ -9,6 +9,8 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    custombutton.cpp \
+    greeting.cpp \
     list_of_themes.cpp \
     login.cpp \
     main.cpp \
@@ -16,12 +18,16 @@ SOURCES += \
     register.cpp
 
 HEADERS += \
+    custombutton.h \
+    greeting.h \
     list_of_themes.h \
     login.h \
     mainwindow.h \
     register.h
 
 FORMS += \
+    custombutton.ui \
+    greeting.ui \
     list_of_themes.ui \
     login.ui \
     mainwindow.ui \

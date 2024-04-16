@@ -1,6 +1,6 @@
 #include "list_of_themes.h"
 #include "ui_list_of_themes.h"
-#include "mainwindow.h"
+#include "greeting.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QDebug>
@@ -13,15 +13,17 @@ List_of_themes::List_of_themes(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    ui->tableView->verticalHeader()->hide();
+    ui->tableView->verticalHeader()->setVisible(false);
     QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
     db.setHostName("localhost"); // Имя хоста
-    db.setDatabaseName("film_app.db"); // Имя базы данных
+    db.setDatabaseName("science_project"); // Имя базы данных
     db.setUserName("postgres"); // Имя пользователя
     db.setPassword("Parol1810!"); // Пароль
     db.open();
 
     QSqlTableModel *model = new QSqlTableModel(parent, db);
-    model->setTable("movies"); // Название вашей таблицы в базе данных
+    model->setTable("projects"); // Название вашей таблицы в базе данных
     model->select();
     ui->tableView->setModel(model);
 }
@@ -45,9 +47,9 @@ void List_of_themes::on_pushButton_3_clicked()
 
 void List_of_themes::on_pushButton_4_clicked()
 {
-    auto *mainWindow = new MainWindow();  // Создать окно логина
-    mainWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
-    mainWindow->show();
+    auto *greeting = new Greeting();  // Создать окно логина
+    greeting->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    greeting->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }
 

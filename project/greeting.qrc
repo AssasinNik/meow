@@ -4,5 +4,6 @@
         <file>return.png</file>
         <file>register.png</file>
         <file>combobox.png</file>
+        <file>spisok.png</file>
     </qresource>
 </RCC>

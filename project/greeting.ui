@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>List_of_themes</class>
- <widget class="QWidget" name="List_of_themes">
+ <class>Greeting</class>
+ <widget class="QWidget" name="Greeting">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,24 +16,6 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>0</y>
-     <width>561</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(109, 85, 255);
-font: 75 40pt &quot;Karla&quot; bold;
-font-weight: 500;</string>
-   </property>
-   <property name="text">
-    <string>Список открытых тем</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
@@ -80,10 +62,28 @@ QPushButton:pressed {
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>0</y>
+     <width>431</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(109, 85, 255);
+font: 75 40pt &quot;Karla&quot; bold;
+font-weight: 500;</string>
+   </property>
+   <property name="text">
+    <string>Рабочая область</string>
+   </property>
+  </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>10</y>
      <width>61</width>
      <height>51</height>
@@ -106,54 +106,48 @@ QPushButton:pressed {
     </size>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView">
+  <widget class="CustomButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>90</x>
      <y>90</y>
-     <width>821</width>
-     <height>391</height>
+     <width>691</width>
+     <height>331</height>
     </rect>
    </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
    <property name="styleSheet">
-    <string notr="true">QTableView {
-    border: 2px solid #6D55FF;
-    border-radius: 5px;
-    gridline-color: #6D55FF;
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: #6D55FF;
+	border-radius: 15px; 
+	font: 75 25pt &quot;Karla&quot; bold;
+	border: 2px;
 }
-
-QTableView::item {
-    background-color: white;
-    font-family: Karla; /* Установка шрифта */
-    font-size: 14pt; /* Установка размера шрифта */
-}
-
-QTableView::item:selected {
-    background-color: #6D55FF;
-    color: white;
-}
-
-QTableView::item:focus {
-    background-color: #6D55FF;
-    color: white;
-}
-
-QHeaderView::section {
-    background-color: #6D55FF;
-    color: white;
-    font-family: Karla;
-    font-size: 14pt;
-}
-QHeaderView::section:horizontal {
-    border: none; /* убираем горизонтальные линии разделителя */
-}
-
-QHeaderView::section:vertical {
-    border: none; /* убираем вертикальные линии разделителя */
+QPushButton:pressed{
+	background-color: #A597FF;
 }</string>
+   </property>
+   <property name="text">
+    <string>Войти</string>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">custombutton.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="greeting.qrc"/>
  </resources>
