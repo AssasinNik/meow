@@ -1,6 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
 #include "mainwindow.h"
+#include "greeting.h"
 
 Login::Login(QWidget *parent) :
     QWidget(parent),
@@ -33,9 +34,18 @@ void Login::on_lineEdit_cursorPositionChanged(int, int){
 
 void Login::on_pushButton_4_clicked()
 {
-    auto *mainWindow = new MainWindow();  // Создать окно логина
-    mainWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
-    mainWindow->show();
+    auto *greetWindow = new MainWindow();  // Создать окно логина
+    greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    greetWindow->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+}
+
+
+void Login::on_pushButton_clicked()
+{
+    auto *greetWindow = new Greeting();  // Создать окно логина
+    greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    greetWindow->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }
 

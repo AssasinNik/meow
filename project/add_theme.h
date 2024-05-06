@@ -1,31 +1,21 @@
-#ifndef LOGIN_H
-#define LOGIN_H
+#ifndef ADD_THEME_H
+#define ADD_THEME_H
 
 #include <QWidget>
 #include <QMouseEvent>
+#include <QRegExpValidator>
+
 namespace Ui {
-class Login;
+class Add_theme;
 }
 
-class Login : public QWidget
+class Add_theme : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Login(QWidget *parent = nullptr);
-    ~Login();
-
-
-private slots:
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-    void on_lineEdit_cursorPositionChanged(int arg1, int arg2);
-
-    void on_pushButton_4_clicked();
-
-    void on_pushButton_clicked();
-
+    explicit Add_theme(QWidget *parent = nullptr);
+    ~Add_theme();
 protected:
     void mousePressEvent(QMouseEvent *event) override {
         // Запомнить начальную позицию при нажатии на кнопку мыши
@@ -51,10 +41,17 @@ protected:
             event->accept();
         }
     }
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
-    Ui::Login *ui;
+    Ui::Add_theme *ui;
     bool m_dragging = false;
     QPoint m_dragPosition;
 };
 
-#endif // LOGIN_H
+#endif // ADD_THEME_H
