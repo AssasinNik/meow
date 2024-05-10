@@ -48,7 +48,7 @@ public:
         Register->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(Register);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(310, 0, 321, 61));
+        label->setGeometry(QRect(270, 0, 491, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));
@@ -99,7 +99,7 @@ public:
         pushButton_4->setIconSize(QSize(35, 35));
         pushButton = new QPushButton(Register);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(530, 420, 361, 61));
+        pushButton->setGeometry(QRect(500, 420, 401, 71));
         pushButton->setAutoFillBackground(false);
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: rgb(255, 255, 255);\n"

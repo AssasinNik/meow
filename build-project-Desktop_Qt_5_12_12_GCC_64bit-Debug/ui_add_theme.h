@@ -81,13 +81,13 @@ public:
         pushButton_4->setIconSize(QSize(35, 35));
         label = new QLabel(Add_theme);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(270, 0, 391, 61));
+        label->setGeometry(QRect(220, 0, 511, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));
         label_2 = new QLabel(Add_theme);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(30, 80, 121, 31));
+        label_2->setGeometry(QRect(30, 80, 161, 31));
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
@@ -111,7 +111,7 @@ public:
 ""));
         label_3 = new QLabel(Add_theme);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(30, 180, 121, 31));
+        label_3->setGeometry(QRect(30, 180, 151, 31));
         label_3->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
@@ -126,7 +126,7 @@ public:
 ""));
         label_4 = new QLabel(Add_theme);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(30, 280, 201, 31));
+        label_4->setGeometry(QRect(30, 280, 251, 31));
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
@@ -178,7 +178,7 @@ public:
         horizontalSlider->setOrientation(Qt::Horizontal);
         label_6 = new QLabel(Add_theme);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(530, 180, 201, 31));
+        label_6->setGeometry(QRect(530, 180, 231, 31));
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));

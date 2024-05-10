@@ -37,7 +37,7 @@ public:
         List_of_themes->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(List_of_themes);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(190, 0, 561, 61));
+        label->setGeometry(QRect(150, 0, 731, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));

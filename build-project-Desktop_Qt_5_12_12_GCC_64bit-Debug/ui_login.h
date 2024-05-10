@@ -42,7 +42,7 @@ public:
         Login->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(Login);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(380, 10, 151, 71));
+        label->setGeometry(QRect(360, 10, 291, 71));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 48pt \"Karla\" bold;\n"
 "font-weight: 500;"));

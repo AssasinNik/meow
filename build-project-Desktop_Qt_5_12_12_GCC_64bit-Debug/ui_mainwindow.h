@@ -95,7 +95,7 @@ public:
 "}"));
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(170, 410, 91, 31));
+        label_4->setGeometry(QRect(170, 410, 111, 31));
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 14pt \"Karla\";"));
         MainWindow->setCentralWidget(centralwidget);

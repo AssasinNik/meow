@@ -65,9 +65,9 @@ QPushButton:pressed {
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>210</x>
      <y>0</y>
-     <width>481</width>
+     <width>541</width>
      <height>61</height>
     </rect>
    </property>

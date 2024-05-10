@@ -59,7 +59,7 @@ public:
 "}"));
         label = new QLabel(Greeting);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(260, 0, 431, 61));
+        label->setGeometry(QRect(210, 0, 541, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));
