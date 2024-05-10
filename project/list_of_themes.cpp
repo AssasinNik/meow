@@ -4,8 +4,10 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QDebug>
-#include <QSqlTableModel>
+#include <QSqlQuery>
+#include <QStandardItemModel>
 #include <QTableView>
+#include <iostream>
 
 List_of_themes::List_of_themes(QWidget *parent) :
     QWidget(parent),
@@ -15,17 +17,78 @@ List_of_themes::List_of_themes(QWidget *parent) :
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     ui->tableView->verticalHeader()->hide();
     ui->tableView->verticalHeader()->setVisible(false);
-    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-    db.setHostName("localhost"); // Имя хоста
-    db.setDatabaseName("science_project"); // Имя базы данных
-    db.setUserName("postgres"); // Имя пользователя
-    db.setPassword("Parol1810!"); // Пароль
-    db.open();
 
-    QSqlTableModel *model = new QSqlTableModel(parent, db);
-    model->setTable("projects"); // Название вашей таблицы в базе данных
-    model->select();
-    ui->tableView->setModel(model);
+    // Установка соединения с базой данных
+    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+    db.setHostName("localhost");
+    db.setDatabaseName("science");
+    db.setUserName("cherenkov_pg");
+    db.setPassword("Parol1810");
+    if (!db.open()) {
+        std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+    }
+    else{
+        std::cout << "Соединение с базой данных установлено" << std::endl;
+    }
+
+    // Выполнение запроса
+    QSqlQuery query;
+    if (!query.exec(R"(
+        SELECT
+            p.ProjectID,
+            p.ProjectName,
+            p.Funding,
+            p.Start_date,
+            p.End_date,
+            p.Information,
+            s.StageName AS Stage,
+            string_agg(DISTINCT st.StudentName, ', ' ORDER BY st.StudentName) AS Students,
+            string_agg(DISTINCT l.LeaderName, ', ' ORDER BY l.LeaderName) AS Leaders
+        FROM
+            Projects p
+        JOIN
+            Stages s ON p.StageID = s.StageID
+        LEFT JOIN
+            ProjectStudents ps ON p.ProjectID = ps.ProjectID
+        LEFT JOIN
+            Students st ON ps.Student_ID_Card = st.Student_ID_Card
+        LEFT JOIN
+            ProjectLeaders pl ON p.ProjectID = pl.ProjectID
+        LEFT JOIN
+            Leaders l ON pl.LeaderID = l.LeaderID
+        GROUP BY
+            p.ProjectID, p.ProjectName, p.Funding, p.Start_date, p.End_date, p.Information, s.StageName
+        ORDER BY
+            p.ProjectID;
+    )")) {
+        std::cerr << "Ошибка выполнения запроса: " << query.lastError().text().toStdString() << std::endl;
+    }
+    else {
+        std::cout << "Запрос выполнен успешно" << std::endl;
+
+        // Создание модели для TableView
+        QStandardItemModel *model = new QStandardItemModel();
+        model->setColumnCount(query.record().count());
+
+        // Установка заголовков столбцов
+        QStringList headers;
+        headers << "ID проекта" << "Название проекта" << "Финансирование" << "Дата начала" << "Дата окончания" << "Информация" << "Стадия" << "Студенты" << "Руководители";
+        model->setHorizontalHeaderLabels(headers);
+
+        // Заполнение модели данными из запроса
+        int row = 0;
+        while (query.next()) {
+            model->insertRow(row);
+            for (int col = 0; col < query.record().count(); ++col) {
+                QModelIndex index = model->index(row, col, QModelIndex());
+                model->setData(index, query.value(col).toString());
+            }
+            ++row;
+        }
+
+        // Установка модели в TableView
+        ui->tableView->setModel(model);
+    }
 }
 
 List_of_themes::~List_of_themes()
@@ -38,18 +101,15 @@ void List_of_themes::on_pushButton_2_clicked()
     close();
 }
 
-
 void List_of_themes::on_pushButton_3_clicked()
 {
     showMinimized();
 }
 
-
 void List_of_themes::on_pushButton_4_clicked()
 {
-    auto *greeting = new Greeting();  // Создать окно логина
-    greeting->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    auto *greeting = new Greeting();
+    greeting->setAttribute(Qt::WA_DeleteOnClose);
     greeting->show();
-    this->close(); // Скрываем текущее окно вместо закрытия
+    this->close();
 }
-
