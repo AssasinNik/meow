@@ -190,24 +190,6 @@ font: 75 18pt &quot;Karla&quot;;
     <string>Описание</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>320</y>
-     <width>361</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 15px; 
-font: 14pt &quot;Karla&quot;;
-padding-left: 10px;
-padding-right:10px;
-border: 2px solid #6D55FF;
-</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
@@ -324,7 +306,7 @@ font: 75 18pt &quot;Karla&quot;;
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>400</y>
+     <y>420</y>
      <width>361</width>
      <height>71</height>
     </rect>
@@ -388,6 +370,108 @@ font: 75 18pt &quot;Karla&quot;;
    </property>
    <property name="text">
     <string>₽</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>320</y>
+     <width>251</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Karla 13</family>
+     <pointsize>17</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: #6D55FF;
+	border-radius: 15px; 
+	font: 75 17pt &quot;Karla&quot; bold;
+	border: 2px;
+}
+QPushButton:pressed{
+	background-color: #A597FF;
+}</string>
+   </property>
+   <property name="text">
+    <string>Прикрепить</string>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>390</y>
+     <width>831</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 11pt &quot;Karla&quot; bold;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>320</y>
+     <width>251</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Karla 13</family>
+     <pointsize>17</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: #6D55FF;
+	border-radius: 15px; 
+	font: 75 17pt &quot;Karla&quot; bold;
+	border: 2px;
+}
+QPushButton:pressed{
+	background-color: #A597FF;
+}</string>
+   </property>
+   <property name="text">
+    <string>Скачать</string>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
  </widget>
