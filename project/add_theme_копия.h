@@ -1,22 +1,23 @@
-#ifndef GREETING_H
-#define GREETING_H
+#ifndef ADD_THEME_H
+#define ADD_THEME_H
 
 #include <QWidget>
+#include <QtWidgets>
+#include <QtSql>
 #include <QMouseEvent>
-#include <QApplication>
-#include <QVBoxLayout>
+#include <QRegExpValidator>
 
 namespace Ui {
-class Greeting;
+class Add_theme;
 }
 
-class Greeting : public QWidget
+class Add_theme : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Greeting(QWidget *parent = nullptr);
-    ~Greeting();
+    explicit Add_theme(QWidget *parent = nullptr);
+    ~Add_theme();
 protected:
     void mousePressEvent(QMouseEvent *event) override {
         // Запомнить начальную позицию при нажатии на кнопку мыши
@@ -43,22 +44,20 @@ protected:
         }
     }
 private slots:
-    void on_pushButton_7_clicked();
-
-    void on_pushButton_clicked();
-
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
 
     void on_pushButton_5_clicked();
 
     void on_pushButton_6_clicked();
 
 private:
-    Ui::Greeting *ui;
+    Ui::Add_theme *ui;
     bool m_dragging = false;
     QPoint m_dragPosition;
 };
 
-#endif // GREETING_H
+#endif // ADD_THEME_H

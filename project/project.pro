@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    PhotoLabel.cpp \
     add_theme.cpp \
     greeting.cpp \
     list_of_themes.cpp \
@@ -16,15 +17,19 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     my_themes.cpp \
+    profil.cpp \
     register.cpp
 
 HEADERS += \
+    PhotoLabel.h \
     add_theme.h \
+    add_theme_копия.h \
     greeting.h \
     list_of_themes.h \
     login.h \
     mainwindow.h \
     my_themes.h \
+    profil.h \
     register.h
 
 FORMS += \
@@ -34,6 +39,7 @@ FORMS += \
     login.ui \
     mainwindow.ui \
     my_themes.ui \
+    profil.ui \
     register.ui
 
 # Default rules for deployment.

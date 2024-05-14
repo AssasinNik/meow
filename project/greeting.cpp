@@ -3,6 +3,7 @@
 #include "list_of_themes.h"
 #include "add_theme.h"
 #include "my_themes.h"
+#include "profil.h"
 
 Greeting::Greeting(QWidget *parent) :
     QWidget(parent),
@@ -51,6 +52,15 @@ void Greeting::on_pushButton_5_clicked()
     auto *add = new Add_theme();  // Создать окно логина
     add->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
     add->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+}
+
+
+void Greeting::on_pushButton_6_clicked()
+{
+    auto *profil = new class profil();  // Создать окно логина
+    profil->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    profil->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }
 
