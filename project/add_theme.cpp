@@ -103,3 +103,16 @@ void Add_theme::on_pushButton_6_clicked()
     }
 }
 
+
+void Add_theme::on_pushButton_clicked()
+{
+    if (ui->lineEdit_2->text().isEmpty()) {
+        QMessageBox::warning(this, "Ошибка", "Название должно быть заполнено.");
+        return;
+    }
+    auto *return_back = new Greeting();  // Создать окно логина
+    return_back->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    return_back->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+}
+

@@ -17,6 +17,14 @@ Profil::~Profil()
 
 void Profil::on_pushButton_clicked()
 {
+    if (ui->lineEdit_7->text().length() <= 8) {
+        QMessageBox::warning(this, "Ошибка", "Пароль должен содержать больше 8 символов.");
+        return;
+    }
+    if (ui->lineEdit_7->text().contains(" ")) {
+        QMessageBox::warning(this, "Ошибка", "Пароль не должен содержать пробелов.");
+        return;
+    }
     auto *greetWindow = new Greeting();  // Создать окно логина
     greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
     greetWindow->show();

@@ -57,10 +57,18 @@ void Register::on_pushButton_clicked()
         QMessageBox::warning(this, "Ошибка", "Некорректный email адрес.");
         return;
     }
+    if (ui->lineEdit_4->text().contains(" ")) {
+        QMessageBox::warning(this, "Ошибка", "Некорректный email адрес.");
+        return;
+    }
 
     // Проверка длины пароля
     if (ui->lineEdit_5->text().length() <= 8) {
         QMessageBox::warning(this, "Ошибка", "Пароль должен содержать больше 8 символов.");
+        return;
+    }
+    if (ui->lineEdit_5->text().contains(" ")) {
+        QMessageBox::warning(this, "Ошибка", "Пароль не должен содержать пробелов.");
         return;
     }
 

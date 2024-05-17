@@ -49,7 +49,7 @@ void Login::on_pushButton_clicked()
         return;
     }
     QRegularExpression emailRegex("[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+");
-    if (!emailRegex.match(ui->lineEdit->text()).hasMatch()) {
+    if (!emailRegex.match(ui->lineEdit_2->text()).hasMatch()) {
         QMessageBox::warning(this, "Ошибка", "Некорректный email адрес.");
         return;
     }

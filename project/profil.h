@@ -2,6 +2,7 @@
 #define PROFIL_H
 
 #include <QWidget>
+#include <QMessageBox>
 #include <QMouseEvent>
 
 

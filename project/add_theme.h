@@ -54,6 +54,8 @@ private slots:
 
     void on_pushButton_6_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Add_theme *ui;
     bool m_dragging = false;

@@ -17,8 +17,7 @@ List_of_themes::List_of_themes(QWidget *parent) :
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     ui->tableView->verticalHeader()->hide();
     ui->tableView->verticalHeader()->setVisible(false);
-
-
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
 
     // Выполнение запроса
     QSqlQuery query;

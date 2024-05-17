@@ -5,6 +5,9 @@
 #include <QMouseEvent>
 #include <QtCore>
 #include <QtSql>
+#include <QTimer>
+#include <QScrollBar>
+
 namespace Ui {
 class List_of_themes;
 }
@@ -48,10 +51,12 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+
 private:
     Ui::List_of_themes *ui;
     bool m_dragging = false;
     QPoint m_dragPosition;
+
 };
 
 #endif // LIST_OF_THEMES_H

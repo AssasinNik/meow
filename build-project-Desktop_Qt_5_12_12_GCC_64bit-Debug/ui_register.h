@@ -169,11 +169,11 @@ public:
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(530, 120, 361, 41));
         comboBox->setStyleSheet(QString::fromUtf8("QComboBox{\n"
-"	border-radius: 15px; \n"
-"	font: 14pt \"Karla\";\n"
-"	padding-left: 10px;\n"
-"	padding-right:10px;\n"
-"	border: 2px solid #6D55FF;\n"
+" 		border-radius: 15px; \n"
+" 		font: 14pt \"Karla\";\n"
+" 		padding-left: 10px;\n"
+" 		padding-right:10px;\n"
+" 		border: 2px solid #6D55FF;\n"
 "}\n"
 "QComboBox::drop-down {\n"
 "        subcontrol-origin: padding;\n"
@@ -183,17 +183,16 @@ public:
 "        border-left-color: darkgray;\n"
 "        border-left-style: solid;\n"
 "        border-top-right-radius: 3px;\n"
-"         border-bottom-right-radius: 3px;\n"
+"        border-bottom-right-radius: 3px;\n"
 "}\n"
 "QComboBox::down-arrow {\n"
 "        image: url(:/new/prefix1/combobox.png);\n"
-"		width:20px;\n"
-"		height:20px;\n"
+"  		 width:20px;\n"
+" 		 height:20px;\n"
 "}\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 2px solid #6D55FF;\n"
-"    selection-background-color: #6D55FF;\n"
-"    background-color: white; \n"
+"	selection-color: #6D55FF;\n"
 "}"));
         label_6 = new QLabel(Register);
         label_6->setObjectName(QString::fromUtf8("label_6"));
