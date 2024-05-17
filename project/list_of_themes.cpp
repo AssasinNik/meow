@@ -18,18 +18,7 @@ List_of_themes::List_of_themes(QWidget *parent) :
     ui->tableView->verticalHeader()->hide();
     ui->tableView->verticalHeader()->setVisible(false);
 
-    // Установка соединения с базой данных
-    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-    db.setHostName("localhost");
-    db.setDatabaseName("science");
-    db.setUserName("cherenkov_pg");
-    db.setPassword("Parol1810");
-    if (!db.open()) {
-        std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
-    }
-    else{
-        std::cout << "Соединение с базой данных установлено" << std::endl;
-    }
+
 
     // Выполнение запроса
     QSqlQuery query;

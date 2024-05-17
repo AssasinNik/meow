@@ -167,7 +167,7 @@ public:
 ""));
         comboBox = new QComboBox(Register);
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(520, 120, 361, 41));
+        comboBox->setGeometry(QRect(530, 120, 361, 41));
         comboBox->setStyleSheet(QString::fromUtf8("QComboBox{\n"
 "	border-radius: 15px; \n"
 "	font: 14pt \"Karla\";\n"

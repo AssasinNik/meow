@@ -43,6 +43,16 @@ void Login::on_pushButton_4_clicked()
 
 void Login::on_pushButton_clicked()
 {
+    // Проверка, заполнены ли все поля
+    if (ui->lineEdit_2->text().isEmpty() || ui->lineEdit->text().isEmpty()) {
+        QMessageBox::warning(this, "Ошибка", "Все поля должны быть заполнены.");
+        return;
+    }
+    QRegularExpression emailRegex("[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+");
+    if (!emailRegex.match(ui->lineEdit->text()).hasMatch()) {
+        QMessageBox::warning(this, "Ошибка", "Некорректный email адрес.");
+        return;
+    }
     auto *greetWindow = new Greeting();  // Создать окно логина
     greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
     greetWindow->show();

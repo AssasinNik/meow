@@ -58,7 +58,7 @@ void Greeting::on_pushButton_5_clicked()
 
 void Greeting::on_pushButton_6_clicked()
 {
-    auto *profil = new class profil();  // Создать окно логина
+    auto *profil = new Profil();  // Создать окно логина
     profil->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
     profil->show();
     this->close(); // Скрываем текущее окно вместо закрытия

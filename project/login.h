@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include <QMouseEvent>
+#include <QMessageBox>
+#include <QRegularExpression>
+
 namespace Ui {
 class Login;
 }

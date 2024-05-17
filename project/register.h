@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QMouseEvent>
+#include <QMessageBox>
 
 namespace Ui {
 class Register;

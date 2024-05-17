@@ -1,118 +1,46 @@
 #include "profil.h"
 #include "ui_profil.h"
-#include <QFileDialog>
-#include <QPainter>
-#include <QPainterPath>
+#include "greeting.h"
 
-profil::profil(QWidget *parent) :
+Profil::Profil(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::profil)
+    ui(new Ui::Profil)
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-
-    // Создание PhotoLabel для отображения фотографии
-    photoLabel = new PhotoLabel(this);
-    photoLabel->setFixedSize(200, 200);
-    photoLabel->setStyleSheet("border-radius: 100px; border: 2px solid #6D55FF;");
-    photoLabel->setAlignment(Qt::AlignCenter);
-
-    // Создание QLabel для затемняющего слоя
-    overlayLabel = new QLabel(this);
-    overlayLabel->setFixedSize(200, 200);
-    overlayLabel->setStyleSheet("background-color: rgba(0, 0, 0); border-radius: 100px;");
-    overlayLabel->setAttribute(Qt::WA_TransparentForMouseEvents); // Прозрачность для событий мыши
-    overlayLabel->hide();
-
-    // Создание QLabel для отображения текста
-    textLabel = new QLabel("Выбрать фото", this);
-    textLabel->setAlignment(Qt::AlignCenter);
-    textLabel->setStyleSheet("color: black; font-size: 18px;");
-    textLabel->setFixedSize(200, 200);
-    textLabel->setAttribute(Qt::WA_TransparentForMouseEvents); // Прозрачность для событий мыши
-    textLabel->hide();
-
-    // Установка начальной фотографии
-    QPixmap defaultPhoto(":/default-photo.jpg");
-    updatePhotoLabel(defaultPhoto);
-
-    // Размещение overlayLabel и textLabel поверх photoLabel
-    overlayLabel->move(photoLabel->pos());
-    textLabel->move(photoLabel->pos());
-
-    connect(photoLabel, &PhotoLabel::clicked, this, &profil::changePhoto);
-    photoLabel->installEventFilter(this);
 }
 
-profil::~profil()
+Profil::~Profil()
 {
     delete ui;
 }
 
-void profil::mousePressEvent(QMouseEvent *event)
+void Profil::on_pushButton_clicked()
 {
-    // Запомнить начальную позицию при нажатии на кнопку мыши
-    if (event->button() == Qt::LeftButton) {
-        m_dragging = true;
-        m_dragPosition = event->globalPos() - frameGeometry().topLeft();
-        event->accept();
-    }
+    auto *greetWindow = new Greeting();  // Создать окно логина
+    greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    greetWindow->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
 }
 
-void profil::mouseMoveEvent(QMouseEvent *event)
+
+void Profil::on_pushButton_2_clicked()
 {
-    // Перемещать окно при зажатой левой кнопке мыши
-    if (event->buttons() & Qt::LeftButton && m_dragging) {
-        move(event->globalPos() - m_dragPosition);
-        event->accept();
-    }
+    close();
 }
 
-void profil::mouseReleaseEvent(QMouseEvent *event)
+
+void Profil::on_pushButton_3_clicked()
 {
-    // Остановить перемещение окна при отпускании кнопки мыши
-    if (event->button() == Qt::LeftButton) {
-        m_dragging = false;
-        event->accept();
-    }
+    showMinimized();
 }
 
-void profil::changePhoto()
+
+void Profil::on_pushButton_4_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Выбрать фотографию"), "", tr("Images (*.png *.xpm *.jpg)"));
-    if (!fileName.isEmpty()) {
-        QPixmap newPhoto(fileName);
-        updatePhotoLabel(newPhoto);
-    }
+    auto *greetWindow = new Greeting();  // Создать окно логина
+    greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    greetWindow->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
 }
 
-void profil::updatePhotoLabel(const QPixmap &pixmap)
-{
-    QPixmap scaledPixmap = pixmap.scaled(photoLabel->size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
-
-    QPixmap roundedPixmap(photoLabel->size());
-    roundedPixmap.fill(Qt::transparent);
-
-    QPainter painter(&roundedPixmap);
-    painter.setRenderHint(QPainter::Antialiasing);
-    QPainterPath path;
-    path.addEllipse(0, 0, photoLabel->width(), photoLabel->height());
-    painter.setClipPath(path);
-    painter.drawPixmap(0, 0, scaledPixmap);
-
-    photoLabel->setPixmap(roundedPixmap);
-}
-
-bool profil::eventFilter(QObject *obj, QEvent *event)
-{
-    if (obj == photoLabel) {
-        if (event->type() == QEvent::Enter) {
-            overlayLabel->show(); // Показать затемняющий слой
-            textLabel->show();    // Показать текст
-        } else if (event->type() == QEvent::Leave) {
-            overlayLabel->hide(); // Скрыть затемняющий слой
-            textLabel->hide();    // Скрыть текст
-        }
-    }
-    return QWidget::eventFilter(obj, event);
-}
