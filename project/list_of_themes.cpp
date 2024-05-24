@@ -1,12 +1,15 @@
 #include "list_of_themes.h"
 #include "ui_list_of_themes.h"
 #include "greeting.h"
+#include "sgreeting.h"
+#include "pgreeting.h"
 #include <QSqlDatabase>
 #include <QMenu>
 #include <QSqlError>
 #include <QDebug>
 #include <QSqlQuery>
 #include <QStandardItemModel>
+#include "role_type.h"
 #include <QTableView>
 #include <iostream>
 
@@ -101,10 +104,24 @@ void List_of_themes::on_pushButton_3_clicked()
 
 void List_of_themes::on_pushButton_4_clicked()
 {
-    auto *greeting = new Greeting();
-    greeting->setAttribute(Qt::WA_DeleteOnClose);
-    greeting->show();
-    this->close();
+    if(IS_ADMIN == true){
+        auto *greeting = new Greeting();
+        greeting->setAttribute(Qt::WA_DeleteOnClose);
+        greeting->show();
+        this->close();
+    }
+    else if(IS_STUDENT == true){
+        auto *greeting = new sgreeting();
+        greeting->setAttribute(Qt::WA_DeleteOnClose);
+        greeting->show();
+        this->close();
+    }
+    else if(IS_PROFESSOR == true){
+        auto *greeting = new pgreeting();
+        greeting->setAttribute(Qt::WA_DeleteOnClose);
+        greeting->show();
+        this->close();
+    }
 }
 void List_of_themes::addRecord(QModelIndex index) {
     // Логика для добавления записи

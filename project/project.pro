@@ -11,27 +11,38 @@ CONFIG += c++11
 SOURCES += \
     add_theme.cpp \
     greeting.cpp \
+    list_of_prof.cpp \
+    list_of_stages.cpp \
+    list_of_students.cpp \
     list_of_themes.cpp \
     main.cpp \
     mainwindow.cpp \
     my_themes.cpp \
     pgreeting.cpp \
     role.cpp \
+    role_type.cpp \
     sgreeting.cpp
 
 HEADERS += \
     add_theme.h \
     greeting.h \
+    list_of_prof.h \
+    list_of_stages.h \
+    list_of_students.h \
     list_of_themes.h \
     mainwindow.h \
     my_themes.h \
     pgreeting.h \
     role.h \
+    role_type.h \
     sgreeting.h
 
 FORMS += \
     add_theme.ui \
     greeting.ui \
+    list_of_prof.ui \
+    list_of_stages.ui \
+    list_of_students.ui \
     list_of_themes.ui \
     mainwindow.ui \
     my_themes.ui \
