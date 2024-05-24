@@ -57,7 +57,7 @@ QPushButton:pressed{
 }</string>
     </property>
     <property name="text">
-     <string>Зарегистрироваться</string>
+     <string>Выбрать роль</string>
     </property>
     <property name="default">
      <bool>false</bool>
@@ -161,23 +161,6 @@ QPushButton:pressed {
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>410</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-font: 14pt &quot;Karla&quot;;</string>
-    </property>
-    <property name="text">
-     <string>или &lt;a href=&quot;login&quot;&gt;войти&lt;/a&gt;</string>
     </property>
    </widget>
   </widget>

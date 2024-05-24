@@ -2,6 +2,7 @@
 #include "ui_list_of_themes.h"
 #include "greeting.h"
 #include <QSqlDatabase>
+#include <QMenu>
 #include <QSqlError>
 #include <QDebug>
 #include <QSqlQuery>
@@ -13,8 +14,12 @@ List_of_themes::List_of_themes(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::List_of_themes)
 {
+
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
+            this, SLOT(customMenuRequested(QPoint)));
+    ui->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->tableView->verticalHeader()->hide();
     ui->tableView->verticalHeader()->setVisible(false);
     ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -100,4 +105,42 @@ void List_of_themes::on_pushButton_4_clicked()
     greeting->setAttribute(Qt::WA_DeleteOnClose);
     greeting->show();
     this->close();
+}
+void List_of_themes::addRecord(QModelIndex index) {
+    // Логика для добавления записи
+}
+
+void List_of_themes::deleteRecord(QModelIndex index) {
+    // Логика для удаления записи
+}
+
+void List_of_themes::editRecord(QModelIndex index) {
+    // Создаем форму редактирования и передаем туда данные
+}
+void List_of_themes::customMenuRequested(QPoint pos) {
+    QModelIndex index = ui->tableView->indexAt(pos);
+    if (!index.isValid())
+        return;
+
+    QMenu *menu = new QMenu(this);
+    menu->setStyleSheet(
+            "QMenu {"
+            "    border: 2px solid #6D55FF; /* Фиолетовая рамка */"
+            "    background-color: #FFFFFF; /* Белый фон */"
+            "    color: #000000; /* Чёрный текст */"
+            "}"
+            "QMenu::item:selected {"
+            "    background-color: #6D55FF; /* Фиолетовый фон при наведении */"
+            "    color: #FFFFFF; /* Белый текст */"
+            "}"
+        );
+    menu->addAction(new QAction("Добавить", this));
+    menu->addAction(new QAction("Удалить", this));
+    menu->addAction(new QAction("Изменить", this));
+
+    connect(menu->actions()[0], &QAction::triggered, [this, index]() { addRecord(index); });
+    connect(menu->actions()[1], &QAction::triggered, [this, index]() { deleteRecord(index); });
+    connect(menu->actions()[2], &QAction::triggered, [this, index]() { editRecord(index); });
+
+    menu->popup(ui->tableView->viewport()->mapToGlobal(pos));
 }

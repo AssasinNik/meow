@@ -12,32 +12,32 @@ SOURCES += \
     add_theme.cpp \
     greeting.cpp \
     list_of_themes.cpp \
-    login.cpp \
     main.cpp \
     mainwindow.cpp \
     my_themes.cpp \
-    profil.cpp \
-    register.cpp
+    pgreeting.cpp \
+    role.cpp \
+    sgreeting.cpp
 
 HEADERS += \
     add_theme.h \
     greeting.h \
     list_of_themes.h \
-    login.h \
     mainwindow.h \
     my_themes.h \
-    profil.h \
-    register.h
+    pgreeting.h \
+    role.h \
+    sgreeting.h
 
 FORMS += \
     add_theme.ui \
     greeting.ui \
     list_of_themes.ui \
-    login.ui \
     mainwindow.ui \
     my_themes.ui \
-    profil.ui \
-    register.ui
+    pgreeting.ui \
+    role.ui \
+    sgreeting.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_List_of_themes_t {
-    QByteArrayData data[5];
-    char stringdata0[88];
+    QByteArrayData data[12];
+    char stringdata0[164];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,12 +35,21 @@ QT_MOC_LITERAL(0, 0, 14), // "List_of_themes"
 QT_MOC_LITERAL(1, 15, 23), // "on_pushButton_2_clicked"
 QT_MOC_LITERAL(2, 39, 0), // ""
 QT_MOC_LITERAL(3, 40, 23), // "on_pushButton_3_clicked"
-QT_MOC_LITERAL(4, 64, 23) // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(4, 64, 23), // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(5, 88, 19), // "customMenuRequested"
+QT_MOC_LITERAL(6, 108, 3), // "pos"
+QT_MOC_LITERAL(7, 112, 10), // "editRecord"
+QT_MOC_LITERAL(8, 123, 11), // "QModelIndex"
+QT_MOC_LITERAL(9, 135, 5), // "index"
+QT_MOC_LITERAL(10, 141, 9), // "addRecord"
+QT_MOC_LITERAL(11, 151, 12) // "deleteRecord"
 
     },
     "List_of_themes\0on_pushButton_2_clicked\0"
     "\0on_pushButton_3_clicked\0"
-    "on_pushButton_4_clicked"
+    "on_pushButton_4_clicked\0customMenuRequested\0"
+    "pos\0editRecord\0QModelIndex\0index\0"
+    "addRecord\0deleteRecord"
 };
 #undef QT_MOC_LITERAL
 
@@ -50,7 +59,7 @@ static const uint qt_meta_data_List_of_themes[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -58,14 +67,22 @@ static const uint qt_meta_data_List_of_themes[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x08 /* Private */,
-       3,    0,   30,    2, 0x08 /* Private */,
-       4,    0,   31,    2, 0x08 /* Private */,
+       1,    0,   49,    2, 0x08 /* Private */,
+       3,    0,   50,    2, 0x08 /* Private */,
+       4,    0,   51,    2, 0x08 /* Private */,
+       5,    1,   52,    2, 0x0a /* Public */,
+       7,    1,   55,    2, 0x0a /* Public */,
+      10,    1,   58,    2, 0x0a /* Public */,
+      11,    1,   61,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QPoint,    6,
+    QMetaType::Void, 0x80000000 | 8,    9,
+    QMetaType::Void, 0x80000000 | 8,    9,
+    QMetaType::Void, 0x80000000 | 8,    9,
 
        0        // eod
 };
@@ -79,10 +96,13 @@ void List_of_themes::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 0: _t->on_pushButton_2_clicked(); break;
         case 1: _t->on_pushButton_3_clicked(); break;
         case 2: _t->on_pushButton_4_clicked(); break;
+        case 3: _t->customMenuRequested((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 4: _t->editRecord((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
+        case 5: _t->addRecord((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
+        case 6: _t->deleteRecord((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject List_of_themes::staticMetaObject = { {
@@ -114,13 +134,13 @@ int List_of_themes::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 7;
     }
     return _id;
 }

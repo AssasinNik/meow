@@ -2,7 +2,6 @@
     <qresource prefix="/new/prefix1">
         <file>greeting.png</file>
         <file>return.png</file>
-        <file>register.png</file>
         <file>combobox.png</file>
         <file>spisok.png</file>
         <file>Backpack.png</file>

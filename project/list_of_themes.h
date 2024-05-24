@@ -51,7 +51,11 @@ private slots:
 
     void on_pushButton_4_clicked();
 
-
+public slots:
+    void customMenuRequested(QPoint pos);
+    void editRecord(QModelIndex index);
+    void addRecord(QModelIndex index);
+    void deleteRecord(QModelIndex index);
 private:
     Ui::List_of_themes *ui;
     bool m_dragging = false;

@@ -65,7 +65,7 @@ public:
 "font-weight: 500;"));
         pushButton = new QPushButton(Greeting);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(470, 110, 441, 101));
+        pushButton->setGeometry(QRect(140, 70, 611, 101));
         QFont font;
         font.setFamily(QString::fromUtf8("Karla 13"));
         font.setPointSize(25);
@@ -91,7 +91,7 @@ public:
         pushButton->setFlat(false);
         pushButton_5 = new QPushButton(Greeting);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(10, 110, 401, 101));
+        pushButton_5->setGeometry(QRect(140, 180, 611, 101));
         pushButton_5->setFont(font);
         pushButton_5->setAutoFillBackground(false);
         pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
@@ -111,7 +111,7 @@ public:
         pushButton_5->setFlat(false);
         pushButton_6 = new QPushButton(Greeting);
         pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setGeometry(QRect(10, 280, 401, 101));
+        pushButton_6->setGeometry(QRect(140, 400, 611, 101));
         pushButton_6->setFont(font);
         pushButton_6->setAutoFillBackground(false);
         pushButton_6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
@@ -131,7 +131,7 @@ public:
         pushButton_6->setFlat(false);
         pushButton_7 = new QPushButton(Greeting);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
-        pushButton_7->setGeometry(QRect(470, 280, 441, 101));
+        pushButton_7->setGeometry(QRect(140, 290, 611, 101));
         pushButton_7->setFont(font);
         pushButton_7->setAutoFillBackground(false);
         pushButton_7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
@@ -168,9 +168,9 @@ public:
         pushButton_3->setText(QString());
         label->setText(QApplication::translate("Greeting", "\320\240\320\260\320\261\320\276\321\207\320\260\321\217 \320\276\320\261\320\273\320\260\321\201\321\202\321\214", nullptr));
         pushButton->setText(QApplication::translate("Greeting", "\320\241\320\277\320\270\321\201\320\276\320\272 \321\202\320\265\320\274", nullptr));
-        pushButton_5->setText(QApplication::translate("Greeting", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
-        pushButton_6->setText(QApplication::translate("Greeting", "\320\237\321\200\320\276\321\204\320\270\320\273\321\214", nullptr));
-        pushButton_7->setText(QApplication::translate("Greeting", "\320\234\320\276\320\270 \321\202\320\265\320\274\321\213", nullptr));
+        pushButton_5->setText(QApplication::translate("Greeting", "\320\241\320\277\320\270\321\201\320\276\320\272 \321\201\321\202\320\260\320\264\320\270\320\271", nullptr));
+        pushButton_6->setText(QApplication::translate("Greeting", "\320\241\320\277\320\270\321\201\320\276\320\272 \320\277\321\200\320\265\320\277\320\276\320\264\320\260\320\262\320\260\321\202\320\265\320\273\320\265\320\271", nullptr));
+        pushButton_7->setText(QApplication::translate("Greeting", "\320\241\320\277\320\270\321\201\320\276\320\272 \321\201\321\202\321\203\320\264\320\265\320\275\321\202\320\276\320\262", nullptr));
     } // retranslateUi
 
 };

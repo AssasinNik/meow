@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "login.h"
-#include "register.h"
+#include "role.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QDebug>
@@ -38,7 +37,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    auto *RegisterWindow = new Register();  // Создать окно логина
+    auto *RegisterWindow = new Role();  // Создать окно логина
     RegisterWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
     RegisterWindow->show();
     this->close(); // Скрываем текущее окно вместо закрытия
@@ -54,16 +53,5 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_3_clicked()
 {
     showMinimized();
-}
-
-
-void MainWindow::on_label_4_linkActivated(const QString &link)
-{
-    if (link == "login") {
-            auto *loginWindow = new Login();  // Создать окно логина
-            loginWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
-            loginWindow->show();
-            this->close(); // Скрываем текущее окно вместо закрытия
-        }
 }
 

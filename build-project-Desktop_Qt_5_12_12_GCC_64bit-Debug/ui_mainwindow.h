@@ -28,7 +28,6 @@ public:
     QLabel *label_3;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
-    QLabel *label_4;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -93,11 +92,6 @@ public:
 "QPushButton:pressed {\n"
 "	background-color: #B2FFC8;\n"
 "}"));
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(170, 410, 111, 31));
-        label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 14pt \"Karla\";"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -111,13 +105,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "\320\227\320\260\321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\270\321\200\320\276\320\262\320\260\321\202\321\214\321\201\321\217", nullptr));
+        pushButton->setText(QApplication::translate("MainWindow", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214 \321\200\320\276\320\273\321\214", nullptr));
         label->setText(QString());
         label_2->setText(QApplication::translate("MainWindow", "\320\235\320\260\321\203\321\207\320\275\320\260\321\217 \320\241\321\204\320\265\321\200\320\260", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "\320\243\320\275\320\270\320\262\320\265\321\200\321\201\320\270\321\202\320\265\321\202\321\201\320\272\320\270\320\271 \320\263\320\270\320\264 \320\277\320\276 \320\235\320\230\320\240", nullptr));
         pushButton_2->setText(QString());
         pushButton_3->setText(QString());
-        label_4->setText(QApplication::translate("MainWindow", "\320\270\320\273\320\270 <a href=\"login\">\320\262\320\276\320\271\321\202\320\270</a>", nullptr));
     } // retranslateUi
 
 };
