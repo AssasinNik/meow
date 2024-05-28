@@ -1,7 +1,11 @@
 #include "add_theme.h"
 #include "ui_add_theme.h"
+#include "list_of_themes.h"
 #include "greeting.h"
+#include "pgreeting.h"
+#include "sgreeting.h"
 #include <QFileDialog>
+#include "role_type.h"
 #include "iostream"
 Add_theme::Add_theme(QWidget *parent) :
     QWidget(parent),
@@ -45,9 +49,9 @@ void Add_theme::on_pushButton_3_clicked()
 
 void Add_theme::on_pushButton_4_clicked()
 {
-    auto *return_back = new Greeting();  // Создать окно логина
-    return_back->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
-    return_back->show();
+    auto *list = new List_of_themes();  // Создать окно логина
+    list->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    list->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }
 

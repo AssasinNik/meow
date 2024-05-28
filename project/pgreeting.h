@@ -45,6 +45,8 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_5_clicked();
+
 private:
     Ui::pgreeting *ui;
     bool m_dragging = false;

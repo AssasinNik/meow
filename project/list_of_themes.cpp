@@ -3,6 +3,7 @@
 #include "greeting.h"
 #include "sgreeting.h"
 #include "pgreeting.h"
+#include "add_theme.h"
 #include <QSqlDatabase>
 #include <QMenu>
 #include <QSqlError>
@@ -123,9 +124,6 @@ void List_of_themes::on_pushButton_4_clicked()
         this->close();
     }
 }
-void List_of_themes::addRecord(QModelIndex index) {
-    // Логика для добавления записи
-}
 
 void List_of_themes::deleteRecord(QModelIndex index) {
     // Логика для удаления записи
@@ -151,13 +149,20 @@ void List_of_themes::customMenuRequested(QPoint pos) {
             "    color: #FFFFFF; /* Белый текст */"
             "}"
         );
-    menu->addAction(new QAction("Добавить", this));
     menu->addAction(new QAction("Удалить", this));
     menu->addAction(new QAction("Изменить", this));
 
-    connect(menu->actions()[0], &QAction::triggered, [this, index]() { addRecord(index); });
+    connect(menu->actions()[0], &QAction::triggered, [this, index]() { editRecord(index); });
     connect(menu->actions()[1], &QAction::triggered, [this, index]() { deleteRecord(index); });
-    connect(menu->actions()[2], &QAction::triggered, [this, index]() { editRecord(index); });
 
     menu->popup(ui->tableView->viewport()->mapToGlobal(pos));
 }
+
+void List_of_themes::on_pushButton_clicked()
+{
+    auto *add_t = new Add_theme();  // Создать окно логина
+    add_t->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    add_t->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+}
+

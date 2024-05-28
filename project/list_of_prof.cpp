@@ -1,5 +1,7 @@
 #include "list_of_prof.h"
 #include "ui_list_of_prof.h"
+#include "add_theme.h"
+#include "add_prof.h"
 #include <QSqlDatabase>
 #include <QMenu>
 #include <QSqlError>
@@ -58,5 +60,14 @@ void list_of_prof::on_pushButton_3_clicked()
 void list_of_prof::on_pushButton_2_clicked()
 {
     close();
+}
+
+
+void list_of_prof::on_pushButton_clicked()
+{
+    auto *add = new add_prof();
+    add->setAttribute(Qt::WA_DeleteOnClose);
+    add->show();
+    this->close();
 }
 

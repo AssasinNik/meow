@@ -101,7 +101,7 @@ QPushButton:pressed {
      <x>50</x>
      <y>90</y>
      <width>821</width>
-     <height>391</height>
+     <height>321</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -197,6 +197,40 @@ QPushButton:pressed {
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>420</y>
+     <width>361</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+	background-color: #6D55FF;
+	border-radius: 15px; 
+	font: 75 25pt &quot;Karla&quot; bold;
+	border: 2px;
+}
+QPushButton:pressed{
+	background-color: #A597FF;
+}</string>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
  </widget>

@@ -153,6 +153,9 @@ padding-right:10px;
 border: 2px solid #6D55FF;
 </string>
    </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_3">
    <property name="geometry">
@@ -208,47 +211,11 @@ font: 75 18pt &quot;Karla&quot;;
     <string>Прикрепить файл</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>80</y>
-     <width>201</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-font: 75 18pt &quot;Karla&quot;;
-</string>
-   </property>
-   <property name="text">
-    <string>Обьем работы</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>120</y>
-     <width>361</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 15px; 
-font: 14pt &quot;Karla&quot;;
-padding-left: 10px;
-padding-right:10px;
-border: 2px solid #6D55FF;
-</string>
-   </property>
-  </widget>
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>220</y>
+     <y>120</y>
      <width>361</width>
      <height>31</height>
     </rect>
@@ -288,7 +255,7 @@ QSlider::handle:horizontal {
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>180</y>
+     <y>80</y>
      <width>231</width>
      <height>31</height>
     </rect>
@@ -340,7 +307,7 @@ QPushButton:pressed{
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>260</y>
+     <y>160</y>
      <width>201</width>
      <height>41</height>
     </rect>
@@ -358,7 +325,7 @@ border: 2px solid #6D55FF;
    <property name="geometry">
     <rect>
      <x>880</x>
-     <y>260</y>
+     <y>160</y>
      <width>31</width>
      <height>31</height>
     </rect>

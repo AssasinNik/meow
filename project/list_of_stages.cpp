@@ -1,5 +1,7 @@
 #include "list_of_stages.h"
 #include "ui_list_of_stages.h"
+#include "add_theme.h"
+#include "add_stage.h"
 #include <QSqlDatabase>
 #include <QMenu>
 #include <QSqlError>
@@ -58,5 +60,14 @@ void list_of_stages::on_pushButton_3_clicked()
 void list_of_stages::on_pushButton_2_clicked()
 {
     close();
+}
+
+
+void list_of_stages::on_pushButton_clicked()
+{
+    auto *add = new add_stage();
+    add->setAttribute(Qt::WA_DeleteOnClose);
+    add->show();
+    this->close();
 }
 

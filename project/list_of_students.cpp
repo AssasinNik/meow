@@ -1,5 +1,6 @@
 #include "list_of_students.h"
 #include "ui_list_of_students.h"
+#include "add_stud.h"
 #include <QSqlDatabase>
 #include <QMenu>
 #include <QSqlError>
@@ -58,5 +59,14 @@ void list_of_students::on_pushButton_4_clicked()
         greeting->show();
         this->close();
     }
+}
+
+
+void list_of_students::on_pushButton_clicked()
+{
+    auto *add = new add_stud();
+    add->setAttribute(Qt::WA_DeleteOnClose);
+    add->show();
+    this->close();
 }
 

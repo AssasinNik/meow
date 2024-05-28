@@ -51,6 +51,8 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::list_of_students *ui;
     bool m_dragging = false;

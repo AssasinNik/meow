@@ -1,24 +1,29 @@
-#ifndef LIST_OF_THEMES_H
-#define LIST_OF_THEMES_H
+#ifndef ADD_STAGE_H
+#define ADD_STAGE_H
 
 #include <QWidget>
-#include <QMouseEvent>
-#include <QtCore>
+#include <QtWidgets>
 #include <QtSql>
-#include <QTimer>
-#include <QScrollBar>
-
+#include <QMouseEvent>
+#include <QRegExpValidator>
 namespace Ui {
-class List_of_themes;
+class add_stage;
 }
 
-class List_of_themes : public QWidget
+class add_stage : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit List_of_themes(QWidget *parent = nullptr);
-    ~List_of_themes();
+    explicit add_stage(QWidget *parent = nullptr);
+    ~add_stage();
+
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
 protected:
     void mousePressEvent(QMouseEvent *event) override {
         // Запомнить начальную позицию при нажатии на кнопку мыши
@@ -44,24 +49,10 @@ protected:
             event->accept();
         }
     }
-private slots:
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-
-    void on_pushButton_4_clicked();
-
-    void on_pushButton_clicked();
-
-public slots:
-    void customMenuRequested(QPoint pos);
-    void editRecord(QModelIndex index);
-    void deleteRecord(QModelIndex index);
 private:
-    Ui::List_of_themes *ui;
+    Ui::add_stage *ui;
     bool m_dragging = false;
     QPoint m_dragPosition;
-
 };
 
-#endif // LIST_OF_THEMES_H
+#endif // ADD_STAGE_H

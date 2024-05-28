@@ -9,6 +9,9 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    add_prof.cpp \
+    add_stage.cpp \
+    add_stud.cpp \
     add_theme.cpp \
     greeting.cpp \
     list_of_prof.cpp \
@@ -24,6 +27,9 @@ SOURCES += \
     sgreeting.cpp
 
 HEADERS += \
+    add_prof.h \
+    add_stage.h \
+    add_stud.h \
     add_theme.h \
     greeting.h \
     list_of_prof.h \
@@ -38,6 +44,9 @@ HEADERS += \
     sgreeting.h
 
 FORMS += \
+    add_prof.ui \
+    add_stage.ui \
+    add_stud.ui \
     add_theme.ui \
     greeting.ui \
     list_of_prof.ui \
