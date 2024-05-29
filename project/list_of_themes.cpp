@@ -11,6 +11,7 @@
 #include <QSqlQuery>
 #include <QStandardItemModel>
 #include "role_type.h"
+#include "change_theme.h"
 #include <QTableView>
 #include <iostream>
 
@@ -135,6 +136,10 @@ void List_of_themes::deleteRecord(QModelIndex index) {
 
 void List_of_themes::editRecord(QModelIndex index) {
     // Создаем форму редактирования и передаем туда данные
+    auto *change_t = new change_theme();  // Создать окно логина
+    change_t->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    change_t->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
 }
 void List_of_themes::customMenuRequested(QPoint pos) {
     QModelIndex index = ui->tableView->indexAt(pos);

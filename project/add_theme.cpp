@@ -123,9 +123,18 @@ void Add_theme::on_pushButton_clicked()
         QMessageBox::warning(this, "Ошибка", "Название должно быть заполнено.");
         return;
     }
-    auto *return_back = new Greeting();  // Создать окно логина
-    return_back->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
-    return_back->show();
-    this->close(); // Скрываем текущее окно вместо закрытия
+    if(IS_TABLE == true){
+        IS_TABLE=false;
+        auto *list = new List_of_themes();  // Создать окно логина
+        list->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+        list->show();
+        this->close(); // Скрываем текущее окно вместо закрытия
+    }
+    else{
+        auto *greet = new pgreeting();  // Создать окно логина
+        greet->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+        greet->show();
+        this->close(); // Скрываем текущее окно вместо закрытия
+    }
 }
 
