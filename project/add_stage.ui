@@ -176,24 +176,6 @@ font-weight: 500;</string>
     <string>Добавить стадию</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>220</y>
-     <width>361</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 15px; 
-font: 14pt &quot;Karla&quot;;
-padding-left: 10px;
-padding-right:10px;
-border: 2px solid #6D55FF;
-</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
@@ -266,13 +248,52 @@ font: 75 18pt &quot;Karla&quot;;
     <string>Сложность стадии</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
      <x>470</x>
      <y>220</y>
-     <width>281</width>
+     <width>251</width>
      <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox{
+	border-radius: 15px; 
+	font: 14pt &quot;Karla&quot;;
+	padding-left: 10px;
+	padding-right:10px;
+	border: 2px solid #6D55FF;
+}
+QComboBox::drop-down {
+        subcontrol-origin: padding;
+        subcontrol-position: top right;
+        width: 20px;
+        border-left-width: 1px;
+        border-left-color: darkgray;
+        border-left-style: solid;
+        border-top-right-radius: 3px;
+         border-bottom-right-radius: 3px;
+}
+QComboBox::down-arrow {
+        image: url(:/new/prefix1/combobox.png);
+		width:20px;
+		height:20px;
+}
+QComboBox QAbstractItemView {
+    border: 2px solid #6D55FF;
+    color: #6D55FF;
+    background-color: white; 
+}</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>220</y>
+     <width>361</width>
+     <height>181</height>
     </rect>
    </property>
    <property name="styleSheet">

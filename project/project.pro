@@ -13,6 +13,10 @@ SOURCES += \
     add_stage.cpp \
     add_stud.cpp \
     add_theme.cpp \
+    change_prof.cpp \
+    change_stage.cpp \
+    change_student.cpp \
+    change_theme.cpp \
     greeting.cpp \
     list_of_prof.cpp \
     list_of_stages.cpp \
@@ -31,6 +35,10 @@ HEADERS += \
     add_stage.h \
     add_stud.h \
     add_theme.h \
+    change_prof.h \
+    change_stage.h \
+    change_student.h \
+    change_theme.h \
     greeting.h \
     list_of_prof.h \
     list_of_stages.h \
@@ -48,6 +56,10 @@ FORMS += \
     add_stage.ui \
     add_stud.ui \
     add_theme.ui \
+    change_prof.ui \
+    change_stage.ui \
+    change_student.ui \
+    change_theme.ui \
     greeting.ui \
     list_of_prof.ui \
     list_of_stages.ui \

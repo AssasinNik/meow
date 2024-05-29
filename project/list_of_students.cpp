@@ -20,6 +20,10 @@ list_of_students::list_of_students(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+
+    if(IS_PROFESSOR==true || IS_STUDENT==true){
+        ui->pushButton->close();
+    }
 }
 
 list_of_students::~list_of_students()
@@ -60,8 +64,6 @@ void list_of_students::on_pushButton_4_clicked()
         this->close();
     }
 }
-
-
 void list_of_students::on_pushButton_clicked()
 {
     auto *add = new add_stud();

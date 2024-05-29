@@ -21,6 +21,9 @@ list_of_prof::list_of_prof(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    if(IS_STUDENT==true){
+        ui->pushButton->close();
+    }
 }
 
 list_of_prof::~list_of_prof()

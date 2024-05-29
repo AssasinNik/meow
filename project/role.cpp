@@ -89,7 +89,7 @@ void Role::on_pushButton_5_clicked()
 
 void Role::on_pushButton_4_clicked()
 {
-    IS_ADMIN=true;
+    IS_STUDENT=true;
     QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
     db.setHostName("localhost");
     db.setDatabaseName("science");

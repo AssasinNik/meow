@@ -21,6 +21,10 @@ List_of_themes::List_of_themes(QWidget *parent) :
 
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    if(IS_STUDENT==true){
+        ui->pushButton->close();
+    }
+
     connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
             this, SLOT(customMenuRequested(QPoint)));
     ui->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -160,6 +164,7 @@ void List_of_themes::customMenuRequested(QPoint pos) {
 
 void List_of_themes::on_pushButton_clicked()
 {
+    IS_TABLE = true;
     auto *add_t = new Add_theme();  // Создать окно логина
     add_t->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
     add_t->show();

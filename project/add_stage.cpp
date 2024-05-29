@@ -8,6 +8,9 @@ add_stage::add_stage(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    ui->comboBox->addItem("Низкая");
+    ui->comboBox->addItem("Средняя");
+    ui->comboBox->addItem("Сложная");
 }
 
 add_stage::~add_stage()
