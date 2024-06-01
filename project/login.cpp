@@ -1,61 +1,102 @@
 #include "login.h"
 #include "ui_login.h"
-#include "mainwindow.h"
+#include "role_type.h"
+#include "role.h"
 #include "greeting.h"
+#include "sgreeting.h"
+#include "pgreeting.h"
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QDebug>
+#include <QSqlQuery>
+#include "iostream"
 
-Login::Login(QWidget *parent) :
+login::login(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::Login)
+    ui(new Ui::login)
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    ui->lineEdit->setEchoMode(QLineEdit::Password);
 }
 
-Login::~Login()
+login::~login()
 {
     delete ui;
 }
 
-void Login::on_pushButton_2_clicked()
+void login::on_pushButton_2_clicked()
 {
     close();
 }
 
 
-void Login::on_pushButton_3_clicked()
+void login::on_pushButton_3_clicked()
 {
     showMinimized();
 }
 
-void Login::on_lineEdit_cursorPositionChanged(int, int){
 
-}
-
-void Login::on_pushButton_4_clicked()
+void login::on_pushButton_4_clicked()
 {
-    auto *greetWindow = new MainWindow();  // Создать окно логина
-    greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
-    greetWindow->show();
-    this->close(); // Скрываем текущее окно вместо закрытия
+    auto *role_choice = new Role();
+    role_choice->setAttribute(Qt::WA_DeleteOnClose);
+    role_choice->show();
+    this->close();
 }
 
 
-void Login::on_pushButton_clicked()
+void login::on_pushButton_clicked()
 {
-    // Проверка, заполнены ли все поля
-    if (ui->lineEdit_2->text().isEmpty() || ui->lineEdit->text().isEmpty()) {
-        QMessageBox::warning(this, "Ошибка", "Все поля должны быть заполнены.");
-        return;
+    if(IS_ADMIN == true){
+        QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+        db.setHostName("localhost");
+        db.setDatabaseName("science");
+        db.setUserName("admin_user");
+        db.setPassword("adminPass");
+        if (!db.open()) {
+            std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+        }
+        else{
+            std::cout << "Соединение с базой данных установлено" << std::endl;
+        }
+        auto *greeting = new Greeting();
+        greeting->setAttribute(Qt::WA_DeleteOnClose);
+        greeting->show();
+        this->close();
     }
-    QRegularExpression emailRegex("[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+");
-    if (!emailRegex.match(ui->lineEdit_2->text()).hasMatch()) {
-        QMessageBox::warning(this, "Ошибка", "Некорректный email адрес.");
-        return;
+    else if(IS_STUDENT == true){
+        QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+        db.setHostName("localhost");
+        db.setDatabaseName("science");
+        db.setUserName("uni_student");
+        db.setPassword("studentPass");
+        if (!db.open()) {
+            std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+        }
+        else{
+            std::cout << "Соединение с базой данных установлено" << std::endl;
+        }
+        auto *greeting = new sgreeting();
+        greeting->setAttribute(Qt::WA_DeleteOnClose);
+        greeting->show();
+        this->close();
     }
-    auto *greetWindow = new Greeting();  // Создать окно логина
-    greetWindow->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
-    greetWindow->show();
-    this->close(); // Скрываем текущее окно вместо закрытия
+    else if(IS_PROFESSOR == true){
+        QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+        db.setHostName("localhost");
+        db.setDatabaseName("science");
+        db.setUserName("professor");
+        db.setPassword("professorPass");
+        if (!db.open()) {
+            std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+        }
+        else{
+            std::cout << "Соединение с базой данных установлено" << std::endl;
+        }
+        auto *greeting = new pgreeting();
+        greeting->setAttribute(Qt::WA_DeleteOnClose);
+        greeting->show();
+        this->close();
+    }
 }
 

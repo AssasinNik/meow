@@ -22,6 +22,7 @@ SOURCES += \
     list_of_stages.cpp \
     list_of_students.cpp \
     list_of_themes.cpp \
+    login.cpp \
     main.cpp \
     mainwindow.cpp \
     my_themes.cpp \
@@ -44,6 +45,7 @@ HEADERS += \
     list_of_stages.h \
     list_of_students.h \
     list_of_themes.h \
+    login.h \
     mainwindow.h \
     my_themes.h \
     pgreeting.h \
@@ -65,6 +67,7 @@ FORMS += \
     list_of_stages.ui \
     list_of_students.ui \
     list_of_themes.ui \
+    login.ui \
     mainwindow.ui \
     my_themes.ui \
     pgreeting.ui \
