@@ -52,7 +52,10 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_clicked();
-
+public slots:
+    void customMenuRequested(QPoint pos);
+    void editRecord(QModelIndex index);
+    void deleteRecord(QModelIndex index);
 private:
     Ui::list_of_stages *ui;
     bool m_dragging = false;

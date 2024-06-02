@@ -129,11 +129,15 @@ void List_of_themes::on_pushButton_4_clicked()
         this->close();
     }
 }
-
+void List_of_themes::addStudent(QModelIndex index) {
+    // Логика для добавления студента
+}
+void List_of_themes::addProfessor(QModelIndex index) {
+    // Логика для добавления преподавателя
+}
 void List_of_themes::deleteRecord(QModelIndex index) {
     // Логика для удаления записи
 }
-
 void List_of_themes::editRecord(QModelIndex index) {
     // Создаем форму редактирования и передаем туда данные
     auto *change_t = new change_theme();  // Создать окно логина
@@ -160,10 +164,13 @@ void List_of_themes::customMenuRequested(QPoint pos) {
         );
     menu->addAction(new QAction("Удалить", this));
     menu->addAction(new QAction("Изменить", this));
+    menu->addAction(new QAction("Добавить студента к проекту", this));
+    menu->addAction(new QAction("Добавить преподавателя к проекту", this));
 
     connect(menu->actions()[0], &QAction::triggered, [this, index]() { editRecord(index); });
     connect(menu->actions()[1], &QAction::triggered, [this, index]() { deleteRecord(index); });
-
+    connect(menu->actions()[2], &QAction::triggered, [this, index]() { addStudent(index); });
+    connect(menu->actions()[3], &QAction::triggered, [this, index]() { addProfessor(index); });
     menu->popup(ui->tableView->viewport()->mapToGlobal(pos));
 }
 

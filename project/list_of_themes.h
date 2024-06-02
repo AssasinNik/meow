@@ -57,6 +57,8 @@ public slots:
     void customMenuRequested(QPoint pos);
     void editRecord(QModelIndex index);
     void deleteRecord(QModelIndex index);
+    void addStudent(QModelIndex index);
+    void addProfessor(QModelIndex index);
 private:
     Ui::List_of_themes *ui;
     bool m_dragging = false;

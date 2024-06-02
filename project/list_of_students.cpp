@@ -12,6 +12,7 @@
 #include "greeting.h"
 #include "sgreeting.h"
 #include "pgreeting.h"
+#include "change_student.h"
 #include <iostream>
 
 list_of_students::list_of_students(QWidget *parent) :
@@ -63,6 +64,40 @@ void list_of_students::on_pushButton_4_clicked()
         greeting->show();
         this->close();
     }
+}
+void list_of_students::deleteRecord(QModelIndex index) {
+    // Логика для удаления записи
+}
+void list_of_students::editRecord(QModelIndex index) {
+    // Создаем форму редактирования и передаем туда данные
+    auto *change_t = new change_student();  // Создать окно логина
+    change_t->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    change_t->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+}
+void list_of_students::customMenuRequested(QPoint pos) {
+    QModelIndex index = ui->tableView->indexAt(pos);
+    if (!index.isValid())
+        return;
+
+    QMenu *menu = new QMenu(this);
+    menu->setStyleSheet(
+            "QMenu {"
+            "    border: 2px solid #6D55FF; /* Фиолетовая рамка */"
+            "    background-color: #FFFFFF; /* Белый фон */"
+            "    color: #000000; /* Чёрный текст */"
+            "}"
+            "QMenu::item:selected {"
+            "    background-color: #6D55FF; /* Фиолетовый фон при наведении */"
+            "    color: #FFFFFF; /* Белый текст */"
+            "}"
+        );
+    menu->addAction(new QAction("Удалить", this));
+    menu->addAction(new QAction("Изменить", this));
+
+    connect(menu->actions()[0], &QAction::triggered, [this, index]() { editRecord(index); });
+    connect(menu->actions()[1], &QAction::triggered, [this, index]() { deleteRecord(index); });
+    menu->popup(ui->tableView->viewport()->mapToGlobal(pos));
 }
 void list_of_students::on_pushButton_clicked()
 {

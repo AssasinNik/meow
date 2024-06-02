@@ -1,24 +1,20 @@
-#ifndef LIST_OF_STUDENTS_H
-#define LIST_OF_STUDENTS_H
+#ifndef PROFESSOR_PROJECT_H
+#define PROFESSOR_PROJECT_H
 
 #include <QWidget>
 #include <QMouseEvent>
-#include <QtCore>
-#include <QtSql>
-#include <QTimer>
-#include <QScrollBar>
 
 namespace Ui {
-class list_of_students;
+class professor_project;
 }
 
-class list_of_students : public QWidget
+class professor_project : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit list_of_students(QWidget *parent = nullptr);
-    ~list_of_students();
+    explicit professor_project(QWidget *parent = nullptr);
+    ~professor_project();
 protected:
     void mousePressEvent(QMouseEvent *event) override {
         // Запомнить начальную позицию при нажатии на кнопку мыши
@@ -51,15 +47,10 @@ private slots:
 
     void on_pushButton_4_clicked();
 
-    void on_pushButton_clicked();
-public slots:
-    void customMenuRequested(QPoint pos);
-    void editRecord(QModelIndex index);
-    void deleteRecord(QModelIndex index);
 private:
-    Ui::list_of_students *ui;
+    Ui::professor_project *ui;
     bool m_dragging = false;
     QPoint m_dragPosition;
 };
 
-#endif // LIST_OF_STUDENTS_H
+#endif // PROFESSOR_PROJECT_H

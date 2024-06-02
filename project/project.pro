@@ -27,9 +27,11 @@ SOURCES += \
     mainwindow.cpp \
     my_themes.cpp \
     pgreeting.cpp \
+    professor_project.cpp \
     role.cpp \
     role_type.cpp \
-    sgreeting.cpp
+    sgreeting.cpp \
+    student_project.cpp
 
 HEADERS += \
     add_prof.h \
@@ -49,9 +51,11 @@ HEADERS += \
     mainwindow.h \
     my_themes.h \
     pgreeting.h \
+    professor_project.h \
     role.h \
     role_type.h \
-    sgreeting.h
+    sgreeting.h \
+    student_project.h
 
 FORMS += \
     add_prof.ui \
@@ -71,8 +75,10 @@ FORMS += \
     mainwindow.ui \
     my_themes.ui \
     pgreeting.ui \
+    professor_project.ui \
     role.ui \
-    sgreeting.ui
+    sgreeting.ui \
+    student_project.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
