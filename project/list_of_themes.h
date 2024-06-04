@@ -59,6 +59,7 @@ public slots:
     void deleteRecord(QModelIndex index);
     void addStudent(QModelIndex index);
     void addProfessor(QModelIndex index);
+    void loadData();
 private:
     Ui::List_of_themes *ui;
     bool m_dragging = false;

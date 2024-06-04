@@ -17,22 +17,12 @@ Add_theme::Add_theme(QWidget *parent) :
     ui->lineEdit_6->setValidator(validator);
     ui->horizontalSlider->setMinimum(0);
     ui->horizontalSlider->setMaximum(400000);
+
     connect(ui->horizontalSlider, SIGNAL(valueChanged(int)), this, SLOT(on_horizontalSlider_valueChanged(int)));
     connect(ui->lineEdit_6, SIGNAL(textChanged(const QString &)), this, SLOT(on_lineEdit_6_textChanged(const QString &)));
-    // Установка соединения с базой данных
-    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-    db.setHostName("localhost");
-    db.setDatabaseName("science");
-    db.setUserName("cherenkov_pg");
-    db.setPassword("Parol1810");
-            if (!db.open()) {
-                qDebug() << "Database error occurred:" << db.lastError();
-                return;
-            }
-            QSqlQuery query;
-            query.exec("CREATE TABLE IF NOT EXISTS files_12 (id SERIAL PRIMARY KEY, file_data BYTEA, extension TEXT)");
 }
-
+QByteArray fileData;
+QString fileExtension;
 Add_theme::~Add_theme()
 {
     delete ui;
@@ -83,18 +73,11 @@ void Add_theme::on_pushButton_5_clicked()
         return;
     }
 
-    QByteArray fileData = file.readAll();
-    QString fileExtension = QFileInfo(fileName).suffix();
-
-    QSqlQuery query;
-    query.prepare("INSERT INTO files_12 (file_data, extension) VALUES (:file_data, :extension)");
-    query.bindValue(":file_data", fileData);
-    query.bindValue(":extension", fileExtension);
-    if (!query.exec()) {
-        qDebug() << "Error inserting file into the database:" << query.lastError();
+    fileData = file.readAll();
+    fileExtension = QFileInfo(fileName).suffix();
+    if (fileExtension==" ") {
         ui->label_8->setText("Не удалось прикрепить файл");
     } else {
-        qDebug() << "File uploaded successfully with extension " << fileExtension;
         ui->label_8->setText("Прикреплен файл: " + QFileInfo(fileName).fileName());
     }
     file.close();
@@ -119,9 +102,31 @@ void Add_theme::on_horizontalSlider_valueChanged(int value)
 
 void Add_theme::on_pushButton_clicked()
 {
-    if (ui->lineEdit_2->text().isEmpty()) {
-        QMessageBox::warning(this, "Ошибка", "Название должно быть заполнено.");
-        return;
+    QSqlQuery query;
+    query.exec("SELECT MAX(projectid) FROM projects");
+    int projectID = 1; // Стартуем с 1, если таблица пуста
+    if (query.next()) {
+        projectID = query.value(0).toInt() + 1; // Получаем следующий ID
+    }
+    QString projectName = ui->lineEdit_2->text(); // QLineEdit для имени студента
+    QString information = ui->lineEdit_3->text(); // QLineEdit для электронной почты
+    QString funding = ui->lineEdit_6->text(); // QLineEdit для пароля
+    QDate currentDate = QDate::currentDate();
+    QString formattedDate = currentDate.toString("yyyy-MM-dd");
+    query.prepare("INSERT INTO projects (projectid, projectname, start_date, end_date, information, file, file_index, funding) "
+                  "VALUES (:projectid, :projectname, :start_date, NULL, :information, :file, :file_index, :funding)");
+    query.bindValue(":projectid", projectID);
+    query.bindValue(":projectname", projectName);
+    query.bindValue(":start_date", formattedDate);
+    query.bindValue(":information", information);
+    query.bindValue(":file", fileData);
+    query.bindValue(":funding", funding);
+    query.bindValue(":file_index", fileExtension);
+
+    if (!query.exec()) {
+        QMessageBox::critical(this, "Ошибка", "Не удалось добавить студента: " + query.lastError().text());
+    } else {
+        QMessageBox::information(this, "Успешно", "Проект успешно добавлен.");
     }
     if(IS_TABLE == true){
         IS_TABLE=false;

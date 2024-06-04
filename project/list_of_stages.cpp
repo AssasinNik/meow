@@ -29,6 +29,7 @@ list_of_stages::list_of_stages(QWidget *parent) :
     ui->tableView->verticalHeader()->setVisible(false);
     ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive); // Распределение столбцов
+    ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->tableView->horizontalHeader()->setDefaultSectionSize(205); // Задайте начальную ширину
 
     // Выполнение запроса
@@ -103,7 +104,84 @@ void list_of_stages::on_pushButton_2_clicked()
     close();
 }
 void list_of_stages::deleteRecord(QModelIndex index) {
-    // Логика для удаления записи
+    if (!index.isValid())
+            return;
+
+        int row = index.row();
+        QString stageName = ui->tableView->model()->index(row, 0).data().toString(); // Получаем имя стадии
+
+        QSqlDatabase::database().transaction();
+        QSqlQuery query;
+
+        // Получаем ID стадии по её названию
+        query.prepare("SELECT stageid FROM stages WHERE stagename = :stageName");
+        query.bindValue(":stageName", stageName);
+        if (!query.exec()) {
+            qDebug() << "Ошибка при получении stageID: " << query.lastError().text();
+            QSqlDatabase::database().rollback();
+            return;
+        }
+
+        int stageID = -1;
+        if (query.next()) {
+            stageID = query.value(0).toInt();
+        }
+
+        if (stageID == -1) {
+            qDebug() << "Стадия не найдена";
+            QSqlDatabase::database().rollback();
+            return;
+        }
+
+        // Обновляем StageID на NULL в таблице Projects для соответствующих записей
+        query.prepare("UPDATE Projects SET StageID = NULL WHERE StageID = :StageID;");
+        query.bindValue(":StageID", stageID);
+        if (!query.exec()) {
+            qDebug() << "Ошибка при обновлении Projects: " << query.lastError().text();
+            QSqlDatabase::database().rollback();
+            return;
+        }
+
+        // Удаляем стадию из таблицы Stages
+        query.prepare("DELETE FROM stages WHERE stageid = :stageID;");
+        query.bindValue(":stageID", stageID);
+        if (!query.exec()) {
+            qDebug() << "Ошибка при удалении стадии: " << query.lastError().text();
+            QSqlDatabase::database().rollback();
+            return;
+        }
+
+        QSqlDatabase::database().commit();
+    if (!query.exec(R"(SELECT stagename, stagedescription, recommendlength, difficulty FROM stages)")) {
+        std::cerr << "Ошибка выполнения запроса: " << query.lastError().text().toStdString() << std::endl;
+    }
+    else {
+        std::cout << "Запрос выполнен успешно" << std::endl;
+
+        // Создание модели для TableView
+        QStandardItemModel *model = new QStandardItemModel();
+        model->setColumnCount(query.record().count());
+
+        // Установка заголовков столбцов
+        QStringList headers;
+        headers << "Название стадии" << "Описание" << "Продолжительность(реком.)" << "Сложность";
+        model->setHorizontalHeaderLabels(headers);
+
+        // Заполнение модели данными из запроса
+        int row = 0;
+        while (query.next()) {
+            model->insertRow(row);
+            for (int col = 0; col < query.record().count(); ++col) {
+                QModelIndex index = model->index(row, col, QModelIndex());
+                model->setData(index, query.value(col).toString());
+            }
+            ++row;
+        }
+
+        // Установка модели в TableView
+        ui->tableView->setModel(model);
+    }
+
 }
 void list_of_stages::editRecord(QModelIndex index) {
     // Создаем форму редактирования и передаем туда данные

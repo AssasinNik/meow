@@ -62,6 +62,7 @@ list_of_students::list_of_students(QWidget *parent) :
 
             // Установка модели в TableView
             ui->tableView->setModel(model);
+            ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
         }
     }
     else{
@@ -102,6 +103,7 @@ list_of_students::list_of_students(QWidget *parent) :
 
             // Установка модели в TableView
             ui->tableView->setModel(model);
+            ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
         }
     }
 
@@ -146,8 +148,82 @@ void list_of_students::on_pushButton_4_clicked()
     }
 }
 void list_of_students::deleteRecord(QModelIndex index) {
-    // Логика для удаления записи
-}
+    if (!index.isValid())
+        return;
+
+    int row = index.row();
+    QString studentName = ui->tableView->model()->index(row, 0).data().toString(); // Предположим, что имя проекта находится во второй колонке
+
+    QSqlDatabase::database().transaction();
+    QSqlQuery query;
+
+    // Получаем ID проекта по его названию
+    query.prepare("SELECT student_id_card FROM students WHERE studentname = :studentName");
+    query.bindValue(":studentName", studentName);
+    if (!query.exec()) {
+        qDebug() << "Ошибка при получении ProjectID: " << query.lastError().text();
+        QSqlDatabase::database().rollback();
+        return;
+    }
+
+    int studentID = -1;
+    if (query.next()) {
+        studentID = query.value(0).toInt();
+    }
+
+    if (studentID == -1) {
+        qDebug() << "Проект не найден";
+        QSqlDatabase::database().rollback();
+        return;
+    }
+    // Удаляем записи из таблицы ProjectStudents
+    query.prepare("DELETE FROM ProjectStudents WHERE student_id_card = :ProjectID");
+    query.bindValue(":ProjectID", studentID);
+    if (!query.exec()) {
+        qDebug() << "Ошибка при удалении из ProjectStudents: " << query.lastError().text();
+        QSqlDatabase::database().rollback();
+        return;
+    }
+    // Удаляем запись из таблицы Projects
+    query.prepare("DELETE FROM students WHERE student_id_card = :studentID");
+    query.bindValue(":studentID", studentID);
+    if (!query.exec()) {
+        qDebug() << "Ошибка при удалении проекта: " << query.lastError().text();
+        QSqlDatabase::database().rollback();
+        return;
+    }
+
+    QSqlDatabase::database().commit();
+    if (!query.exec(R"(SELECT studentname, email FROM students;)")) {
+        std::cerr << "Ошибка выполнения запроса: " << query.lastError().text().toStdString() << std::endl;
+    }
+    else {
+        std::cout << "Запрос выполнен успешно" << std::endl;
+
+        // Создание модели для TableView
+        QStandardItemModel *model = new QStandardItemModel();
+        model->setColumnCount(query.record().count());
+
+        // Установка заголовков столбцов
+        QStringList headers;
+        headers << "Студент" << "Почта студента";
+        model->setHorizontalHeaderLabels(headers);
+
+        // Заполнение модели данными из запроса
+        int row = 0;
+        while (query.next()) {
+            model->insertRow(row);
+            for (int col = 0; col < query.record().count(); ++col) {
+                QModelIndex index = model->index(row, col, QModelIndex());
+                model->setData(index, query.value(col).toString());
+            }
+            ++row;
+        }
+
+        // Установка модели в TableView
+        ui->tableView->setModel(model);
+
+}}
 void list_of_students::editRecord(QModelIndex index) {
     // Создаем форму редактирования и передаем туда данные
     auto *change_t = new change_student();  // Создать окно логина

@@ -63,6 +63,7 @@ list_of_prof::list_of_prof(QWidget *parent) :
 
             // Установка модели в TableView
             ui->tableView->setModel(model);
+            ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
         }
     }
     else{
@@ -103,6 +104,7 @@ list_of_prof::list_of_prof(QWidget *parent) :
 
             // Установка модели в TableView
             ui->tableView->setModel(model);
+            ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
         }
     }
 }
@@ -140,7 +142,83 @@ void list_of_prof::on_pushButton_3_clicked()
     showMinimized();
 }
 void list_of_prof::deleteRecord(QModelIndex index) {
-    // Логика для удаления записи
+    if (!index.isValid())
+        return;
+
+    int row = index.row();
+    QString leaderName = ui->tableView->model()->index(row, 0).data().toString(); // Предположим, что имя проекта находится во второй колонке
+
+    QSqlDatabase::database().transaction();
+    QSqlQuery query;
+
+    // Получаем ID проекта по его названию
+    query.prepare("SELECT leaderid FROM leaders WHERE leadername = :leaderName");
+    query.bindValue(":leaderName", leaderName);
+    if (!query.exec()) {
+        qDebug() << "Ошибка при получении ProjectID: " << query.lastError().text();
+        QSqlDatabase::database().rollback();
+        return;
+    }
+
+    int leaderID = -1;
+    if (query.next()) {
+        leaderID = query.value(0).toInt();
+    }
+
+    if (leaderID == -1) {
+        qDebug() << "Проект не найден";
+        QSqlDatabase::database().rollback();
+        return;
+    }
+    // Удаляем записи из таблицы ProjectStudents
+    query.prepare("DELETE FROM ProjectLeaders WHERE leaderid = :leaderID");
+    query.bindValue(":leaderID", leaderID);
+    if (!query.exec()) {
+        qDebug() << "Ошибка при удалении из ProjectStudents: " << query.lastError().text();
+        QSqlDatabase::database().rollback();
+        return;
+    }
+    // Удаляем запись из таблицы Projects
+    query.prepare("DELETE FROM leaders WHERE leaderid = :leaderID");
+    query.bindValue(":leaderID", leaderID);
+    if (!query.exec()) {
+        qDebug() << "Ошибка при удалении проекта: " << query.lastError().text();
+        QSqlDatabase::database().rollback();
+        return;
+    }
+
+    QSqlDatabase::database().commit();
+    if (!query.exec(R"(SELECT leadername, email FROM leaders;)")) {
+        std::cerr << "Ошибка выполнения запроса: " << query.lastError().text().toStdString() << std::endl;
+    }
+    else {
+        std::cout << "Запрос выполнен успешно" << std::endl;
+
+        // Создание модели для TableView
+        QStandardItemModel *model = new QStandardItemModel();
+        model->setColumnCount(query.record().count());
+
+        // Установка заголовков столбцов
+        QStringList headers;
+        headers << "Преподаватель" << "Почта преподавателя";
+        model->setHorizontalHeaderLabels(headers);
+
+        // Заполнение модели данными из запроса
+        int row = 0;
+        while (query.next()) {
+            model->insertRow(row);
+            for (int col = 0; col < query.record().count(); ++col) {
+                QModelIndex index = model->index(row, col, QModelIndex());
+                model->setData(index, query.value(col).toString());
+            }
+            ++row;
+        }
+
+        // Установка модели в TableView
+        ui->tableView->setModel(model);
+    }
+
+
 }
 void list_of_prof::editRecord(QModelIndex index) {
     // Создаем форму редактирования и передаем туда данные
