@@ -81,8 +81,8 @@ QTableView::item:selected {
 }
 
 QHeaderView::section {
-    background-color: white; /* Белый фон заголовков столбцов */
-    color: black; /* Черный текст заголовков столбцов */
+    background-color: #6D55FF;; /* Белый фон заголовков столбцов */
+    color: white; /* Черный текст заголовков столбцов */
     padding: 4px;
     border: 1.5px solid #6D55FF; /* Фиолетовая граница заголовков */
 	 border-width: 1px;
@@ -166,7 +166,7 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(109, 85, 255);
-font: 75 40pt &quot;Karla&quot; bold;
+font: 75 35pt &quot;Karla&quot; bold;
 font-weight: 500;</string>
    </property>
    <property name="text">

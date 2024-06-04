@@ -31,7 +31,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>120</x>
      <y>0</y>
      <width>731</width>
      <height>61</height>
@@ -125,8 +125,8 @@ QTableView::item:selected {
 }
 
 QHeaderView::section {
-    background-color: white; /* Белый фон заголовков столбцов */
-    color: black; /* Черный текст заголовков столбцов */
+    background-color: #6D55FF;; /* Белый фон заголовков столбцов */
+    color: white; /* Черный текст заголовков столбцов */
     padding: 4px;
     border: 1.5px solid #6D55FF; /* Фиолетовая граница заголовков */
 	 border-width: 1px;

@@ -19,34 +19,28 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Login
+class Ui_login
 {
 public:
-    QLabel *label;
     QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton;
-    QLabel *label_2;
-    QLabel *label_3;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
     QPushButton *pushButton_4;
+    QPushButton *pushButton_3;
+    QLabel *label;
+    QLineEdit *lineEdit_2;
+    QPushButton *pushButton;
+    QLabel *label_3;
+    QLineEdit *lineEdit_3;
+    QLabel *label_4;
 
-    void setupUi(QWidget *Login)
+    void setupUi(QWidget *login)
     {
-        if (Login->objectName().isEmpty())
-            Login->setObjectName(QString::fromUtf8("Login"));
-        Login->resize(921, 511);
-        Login->setMinimumSize(QSize(921, 511));
-        Login->setMaximumSize(QSize(921, 511));
-        Login->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
-        label = new QLabel(Login);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(360, 10, 291, 71));
-        label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
-"font: 75 48pt \"Karla\" bold;\n"
-"font-weight: 500;"));
-        pushButton_2 = new QPushButton(Login);
+        if (login->objectName().isEmpty())
+            login->setObjectName(QString::fromUtf8("login"));
+        login->resize(921, 511);
+        login->setMinimumSize(QSize(921, 511));
+        login->setMaximumSize(QSize(921, 511));
+        login->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        pushButton_2 = new QPushButton(login);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         pushButton_2->setGeometry(QRect(890, 10, 20, 20));
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
@@ -57,7 +51,15 @@ public:
 "QPushButton:pressed {\n"
 "	background-color: #FFBCBC;\n"
 "}"));
-        pushButton_3 = new QPushButton(Login);
+        pushButton_4 = new QPushButton(login);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(20, 10, 61, 51));
+        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/new/prefix1/return.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_4->setIcon(icon);
+        pushButton_4->setIconSize(QSize(35, 35));
+        pushButton_3 = new QPushButton(login);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(860, 10, 20, 20));
         pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
@@ -68,9 +70,24 @@ public:
 "QPushButton:pressed {\n"
 "	background-color: #B2FFC8;\n"
 "}"));
-        pushButton = new QPushButton(Login);
+        label = new QLabel(login);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(350, 0, 251, 61));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
+"font: 75 40pt \"Karla\" bold;\n"
+"font-weight: 500;"));
+        lineEdit_2 = new QLineEdit(login);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(270, 160, 361, 41));
+        lineEdit_2->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
+"font: 14pt \"Karla\";\n"
+"padding-left: 10px;\n"
+"padding-right:10px;\n"
+"border: 2px solid #6D55FF;\n"
+""));
+        pushButton = new QPushButton(login);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(260, 360, 361, 61));
+        pushButton->setGeometry(QRect(280, 420, 361, 71));
         pushButton->setAutoFillBackground(false);
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	color: rgb(255, 255, 255);\n"
@@ -83,67 +100,54 @@ public:
 "	background-color: #A597FF;\n"
 "}"));
         pushButton->setFlat(false);
-        label_2 = new QLabel(Login);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(260, 110, 121, 31));
-        label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+        label_3 = new QLabel(login);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(270, 110, 261, 31));
+        label_3->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
-        label_3 = new QLabel(Login);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(260, 220, 101, 31));
-        label_3->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 75 18pt \"Karla\";"));
-        lineEdit = new QLineEdit(Login);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(260, 270, 361, 41));
-        lineEdit->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
-"font: 14pt \"Karla\";\n"
-"padding-left: 10px;\n"
-"padding-right:10px;\n"
-"border: 2px solid #6D55FF;"));
-        lineEdit_2 = new QLineEdit(Login);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(260, 160, 361, 41));
-        lineEdit_2->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
+        lineEdit_3 = new QLineEdit(login);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(270, 270, 361, 41));
+        lineEdit_3->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
 "font: 14pt \"Karla\";\n"
 "padding-left: 10px;\n"
 "padding-right:10px;\n"
 "border: 2px solid #6D55FF;\n"
 ""));
-        pushButton_4 = new QPushButton(Login);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(20, 10, 61, 51));
-        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 0);"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/new/prefix1/return.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_4->setIcon(icon);
-        pushButton_4->setIconSize(QSize(35, 35));
+        label_4 = new QLabel(login);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(270, 220, 261, 31));
+        label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 75 18pt \"Karla\";\n"
+""));
 
-        retranslateUi(Login);
+        retranslateUi(login);
 
         pushButton->setDefault(false);
 
 
-        QMetaObject::connectSlotsByName(Login);
+        QMetaObject::connectSlotsByName(login);
     } // setupUi
 
-    void retranslateUi(QWidget *Login)
+    void retranslateUi(QWidget *login)
     {
-        Login->setWindowTitle(QApplication::translate("Login", "Form", nullptr));
-        label->setText(QApplication::translate("Login", "\320\222\321\205\320\276\320\264", nullptr));
+        login->setWindowTitle(QApplication::translate("login", "Form", nullptr));
         pushButton_2->setText(QString());
-        pushButton_3->setText(QString());
-        pushButton->setText(QApplication::translate("Login", "\320\222\320\276\320\271\321\202\320\270", nullptr));
-        label_2->setText(QApplication::translate("Login", "\320\237\320\276\321\207\321\202\320\260", nullptr));
-        label_3->setText(QApplication::translate("Login", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         pushButton_4->setText(QString());
+        pushButton_3->setText(QString());
+        label->setText(QApplication::translate("login", "\320\222\320\276\320\271\321\202\320\270", nullptr));
+        lineEdit_2->setText(QString());
+        pushButton->setText(QApplication::translate("login", "\320\222\320\276\320\271\321\202\320\270", nullptr));
+        label_3->setText(QApplication::translate("login", "\320\233\320\276\320\263\320\270\320\275", nullptr));
+        lineEdit_3->setText(QString());
+        label_4->setText(QApplication::translate("login", "\320\237\320\260\321\200\320\276\320\273\321\214 ", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Login: public Ui_Login {};
+    class login: public Ui_login {};
 } // namespace Ui
 
 QT_END_NAMESPACE

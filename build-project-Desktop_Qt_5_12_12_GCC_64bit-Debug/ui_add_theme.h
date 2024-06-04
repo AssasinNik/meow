@@ -32,8 +32,6 @@ public:
     QLineEdit *lineEdit_3;
     QLabel *label_3;
     QLabel *label_4;
-    QLabel *label_5;
-    QLineEdit *lineEdit_5;
     QSlider *horizontalSlider;
     QLabel *label_6;
     QPushButton *pushButton;
@@ -41,7 +39,6 @@ public:
     QLabel *label_7;
     QPushButton *pushButton_5;
     QLabel *label_8;
-    QPushButton *pushButton_6;
 
     void setupUi(QWidget *Add_theme)
     {
@@ -123,24 +120,9 @@ public:
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
-        label_5 = new QLabel(Add_theme);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(530, 80, 201, 31));
-        label_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 75 18pt \"Karla\";\n"
-""));
-        lineEdit_5 = new QLineEdit(Add_theme);
-        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
-        lineEdit_5->setGeometry(QRect(530, 120, 361, 41));
-        lineEdit_5->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
-"font: 14pt \"Karla\";\n"
-"padding-left: 10px;\n"
-"padding-right:10px;\n"
-"border: 2px solid #6D55FF;\n"
-""));
         horizontalSlider = new QSlider(Add_theme);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(530, 220, 361, 31));
+        horizontalSlider->setGeometry(QRect(530, 120, 361, 31));
         horizontalSlider->setStyleSheet(QString::fromUtf8("QSlider::groove:horizontal {\n"
 "    background: #CFCFCF; /* \320\246\320\262\320\265\321\202 \320\275\320\265\320\267\320\260\320\277\320\276\320\273\320\275\320\265\320\275\320\275\320\276\320\271 \321\207\320\260\321\201\321\202\320\270 */\n"
 "    height: 10px; /* \320\222\321\213\321\201\320\276\321\202\320\260 \320\273\320\270\320\275\320\270\320\270 */\n"
@@ -171,7 +153,7 @@ public:
         horizontalSlider->setOrientation(Qt::Horizontal);
         label_6 = new QLabel(Add_theme);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(530, 180, 231, 31));
+        label_6->setGeometry(QRect(530, 80, 231, 31));
         label_6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
@@ -192,7 +174,7 @@ public:
         pushButton->setFlat(false);
         lineEdit_6 = new QLineEdit(Add_theme);
         lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
-        lineEdit_6->setGeometry(QRect(670, 260, 201, 41));
+        lineEdit_6->setGeometry(QRect(670, 160, 201, 41));
         lineEdit_6->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
 "font: 14pt \"Karla\";\n"
 "padding-left: 10px;\n"
@@ -201,7 +183,7 @@ public:
 ""));
         label_7 = new QLabel(Add_theme);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(880, 260, 31, 31));
+        label_7->setGeometry(QRect(880, 160, 31, 31));
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
@@ -231,28 +213,11 @@ public:
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(40, 390, 831, 21));
         label_8->setStyleSheet(QString::fromUtf8("font: 75 11pt \"Karla\" bold;"));
-        pushButton_6 = new QPushButton(Add_theme);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setGeometry(QRect(300, 320, 251, 51));
-        pushButton_6->setFont(font);
-        pushButton_6->setAutoFillBackground(false);
-        pushButton_6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	color: rgb(255, 255, 255);\n"
-"	background-color: #6D55FF;\n"
-"	border-radius: 15px; \n"
-"	font: 75 17pt \"Karla\" bold;\n"
-"	border: 2px;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	background-color: #A597FF;\n"
-"}"));
-        pushButton_6->setFlat(false);
 
         retranslateUi(Add_theme);
 
         pushButton->setDefault(false);
         pushButton_5->setDefault(false);
-        pushButton_6->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(Add_theme);
@@ -266,15 +231,14 @@ public:
         pushButton_4->setText(QString());
         label->setText(QApplication::translate("Add_theme", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
         label_2->setText(QApplication::translate("Add_theme", "\320\235\320\260\320\267\320\262\320\260\320\275\320\270\320\265", nullptr));
+        lineEdit_2->setText(QString());
         label_3->setText(QApplication::translate("Add_theme", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
         label_4->setText(QApplication::translate("Add_theme", "\320\237\321\200\320\270\320\272\321\200\320\265\320\277\320\270\321\202\321\214 \321\204\320\260\320\271\320\273", nullptr));
-        label_5->setText(QApplication::translate("Add_theme", "\320\236\320\261\321\214\320\265\320\274 \321\200\320\260\320\261\320\276\321\202\321\213", nullptr));
         label_6->setText(QApplication::translate("Add_theme", "\320\244\320\270\320\275\320\260\320\275\321\201\320\270\321\200\320\276\320\262\320\260\320\275\320\270\320\265", nullptr));
         pushButton->setText(QApplication::translate("Add_theme", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
         label_7->setText(QApplication::translate("Add_theme", "\342\202\275", nullptr));
         pushButton_5->setText(QApplication::translate("Add_theme", "\320\237\321\200\320\270\320\272\321\200\320\265\320\277\320\270\321\202\321\214", nullptr));
         label_8->setText(QString());
-        pushButton_6->setText(QApplication::translate("Add_theme", "\320\241\320\272\320\260\321\207\320\260\321\202\321\214", nullptr));
     } // retranslateUi
 
 };

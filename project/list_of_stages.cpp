@@ -22,6 +22,46 @@ list_of_stages::list_of_stages(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
+            this, SLOT(customMenuRequested(QPoint)));
+    ui->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
+    ui->tableView->verticalHeader()->hide();
+    ui->tableView->verticalHeader()->setVisible(false);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive); // Распределение столбцов
+    ui->tableView->horizontalHeader()->setDefaultSectionSize(205); // Задайте начальную ширину
+
+    // Выполнение запроса
+    QSqlQuery query;
+    if (!query.exec(R"(SELECT stagename, stagedescription, recommendlength, difficulty FROM stages)")) {
+        std::cerr << "Ошибка выполнения запроса: " << query.lastError().text().toStdString() << std::endl;
+    }
+    else {
+        std::cout << "Запрос выполнен успешно" << std::endl;
+
+        // Создание модели для TableView
+        QStandardItemModel *model = new QStandardItemModel();
+        model->setColumnCount(query.record().count());
+
+        // Установка заголовков столбцов
+        QStringList headers;
+        headers << "Название стадии" << "Описание" << "Продолжительность(реком.)" << "Сложность";
+        model->setHorizontalHeaderLabels(headers);
+
+        // Заполнение модели данными из запроса
+        int row = 0;
+        while (query.next()) {
+            model->insertRow(row);
+            for (int col = 0; col < query.record().count(); ++col) {
+                QModelIndex index = model->index(row, col, QModelIndex());
+                model->setData(index, query.value(col).toString());
+            }
+            ++row;
+        }
+
+        // Установка модели в TableView
+        ui->tableView->setModel(model);
+    }
 }
 
 list_of_stages::~list_of_stages()
@@ -92,8 +132,8 @@ void list_of_stages::customMenuRequested(QPoint pos) {
     menu->addAction(new QAction("Удалить", this));
     menu->addAction(new QAction("Изменить", this));
 
-    connect(menu->actions()[0], &QAction::triggered, [this, index]() { editRecord(index); });
-    connect(menu->actions()[1], &QAction::triggered, [this, index]() { deleteRecord(index); });
+    connect(menu->actions()[1], &QAction::triggered, [this, index]() { editRecord(index); });
+    connect(menu->actions()[0], &QAction::triggered, [this, index]() { deleteRecord(index); });
     menu->popup(ui->tableView->viewport()->mapToGlobal(pos));
 }
 

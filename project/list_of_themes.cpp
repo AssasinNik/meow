@@ -37,7 +37,6 @@ List_of_themes::List_of_themes(QWidget *parent) :
     QSqlQuery query;
     if (!query.exec(R"(
         SELECT
-            p.ProjectID,
             p.ProjectName,
             p.Funding,
             p.Start_date,
@@ -74,7 +73,7 @@ List_of_themes::List_of_themes(QWidget *parent) :
 
         // Установка заголовков столбцов
         QStringList headers;
-        headers << "ID проекта" << "Название проекта" << "Финансирование" << "Дата начала" << "Дата окончания" << "Информация" << "Стадия" << "Студенты" << "Руководители";
+        headers << "Название проекта" << "Финансирование" << "Дата начала" << "Дата окончания" << "Информация" << "Стадия" << "Студенты" << "Руководители";
         model->setHorizontalHeaderLabels(headers);
 
         // Заполнение модели данными из запроса
@@ -167,8 +166,8 @@ void List_of_themes::customMenuRequested(QPoint pos) {
     menu->addAction(new QAction("Добавить студента к проекту", this));
     menu->addAction(new QAction("Добавить преподавателя к проекту", this));
 
-    connect(menu->actions()[0], &QAction::triggered, [this, index]() { editRecord(index); });
-    connect(menu->actions()[1], &QAction::triggered, [this, index]() { deleteRecord(index); });
+    connect(menu->actions()[0], &QAction::triggered, [this, index]() { deleteRecord(index); });
+    connect(menu->actions()[1], &QAction::triggered, [this, index]() { editRecord(index); });
     connect(menu->actions()[2], &QAction::triggered, [this, index]() { addStudent(index); });
     connect(menu->actions()[3], &QAction::triggered, [this, index]() { addProfessor(index); });
     menu->popup(ui->tableView->viewport()->mapToGlobal(pos));

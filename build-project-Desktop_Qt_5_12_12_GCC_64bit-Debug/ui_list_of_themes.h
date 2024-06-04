@@ -28,6 +28,7 @@ public:
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
     QTableView *tableView;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *List_of_themes)
     {
@@ -37,7 +38,7 @@ public:
         List_of_themes->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(List_of_themes);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(150, 0, 731, 61));
+        label->setGeometry(QRect(150, 0, 701, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));
@@ -73,7 +74,7 @@ public:
         pushButton_4->setIconSize(QSize(35, 35));
         tableView = new QTableView(List_of_themes);
         tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(50, 90, 821, 391));
+        tableView->setGeometry(QRect(50, 90, 821, 331));
         tableView->setStyleSheet(QString::fromUtf8("QTableView {\n"
 "    border: 1.5px solid #6D55FF;\n"
 "    border-radius: 5px; /* \320\243\320\274\320\265\320\275\321\214\321\210\320\265\320\275\320\275\320\276\320\265 \320\267\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\270\320\265 \320\272\321\200\320\260\321\221\320\262 */\n"
@@ -96,15 +97,15 @@ public:
 "}\n"
 "\n"
 "QHeaderView::section {\n"
-"    background-color: white; /* \320\221\320\265\320\273\321\213\320\271 \321\204\320\276\320\275 \320\267\320\260\320\263\320\276\320\273\320\276\320\262\320\272\320\276\320\262 \321\201\321\202\320\276\320\273\320\261\321\206\320\276\320\262 */\n"
-"    color: black; /* \320\247\320\265\321\200\320\275\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 \320\267\320\260\320\263\320\276\320\273\320\276\320\262\320\272\320\276\320\262 \321\201\321\202\320\276\320\273\320\261\321\206\320\276\320\262 */\n"
+"    background-color: #6D55FF;; /* \320\221\320\265\320\273\321\213\320\271 \321\204\320\276\320\275 \320\267\320\260\320\263\320\276\320\273\320\276\320\262\320\272\320\276\320\262 \321\201\321\202\320\276\320\273\320\261\321\206\320\276\320\262 */\n"
+"    color: white; /* \320\247\320\265\321\200\320\275\321\213\320\271 \321\202\320\265\320\272\321\201\321\202 \320\267\320\260\320\263\320\276\320\273\320\276\320\262\320\272\320\276\320\262 \321\201\321\202\320\276\320\273\320\261\321\206\320\276\320\262 */\n"
 "    padding: 4px;\n"
 "    border: 1.5px solid #6D55FF; /* \320\244\320\270\320\276\320\273\320\265\321\202\320\276\320\262\320\260\321\217 \320\263\321\200\320\260\320\275\320\270\321\206\320\260 \320\267\320\260\320\263\320\276\320\273\320\276\320\262\320\272\320\276\320\262 */\n"
 "	 border-width: 1px;\n"
 "}\n"
 "QScrollBar:horizontal {\n"
-"    "
-                        "border: none;\n"
+" "
+                        "   border: none;\n"
 "    background: #f0f0f0;\n"
 "    height: 10px; /* \320\243\320\274\320\265\320\275\321\214\321\210\320\265\320\275\320\275\320\260\321\217 \320\262\321\213\321\201\320\276\321\202\320\260 */\n"
 "    margin: 0px 10px 0 10px;\n"
@@ -117,8 +118,8 @@ public:
 "    border-radius: 5px; /* \320\243\320\274\320\265\320\275\321\214\321\210\320\265\320\275\320\275\320\276\320\265 \320\267\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\270\320\265 */\n"
 "}\n"
 "\n"
-"QScrollBar::add-li"
-                        "ne:horizontal,\n"
+"QScrollBar::add"
+                        "-line:horizontal,\n"
 "QScrollBar::sub-line:horizontal {\n"
 "    border: none;\n"
 "    background: none;\n"
@@ -137,8 +138,8 @@ public:
 "QScrollBar::handle:vertical {\n"
 "    background: #6D55FF;\n"
 "    min-height: 10px; /* \320\243\320\274\320\265\320\275\321\214\321\210\320\265\320\275\320\275\320\260\321\217 \320\274\320\270\320\275\320\270\320\274\320\260\320\273\321\214\320\275\320\260\321\217 \320\264\320\273\320\270\320\275\320\260 */\n"
-"    border-radius: 5px; /* \320\243\320\274\320\265\320\275"
-                        "\321\214\321\210\320\265\320\275\320\275\320\276\320\265 \320\267\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\270\320\265 */\n"
+"    border-radius: 5px; /* \320\243\320\274\320\265\320"
+                        "\275\321\214\321\210\320\265\320\275\320\275\320\276\320\265 \320\267\320\260\320\272\321\200\321\203\320\263\320\273\320\265\320\275\320\270\320\265 */\n"
 "}\n"
 "\n"
 "QScrollBar::add-line:vertical,\n"
@@ -148,8 +149,26 @@ public:
 "    width: 0px;\n"
 "    height: 0px;\n"
 "}"));
+        pushButton = new QPushButton(List_of_themes);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(300, 430, 361, 71));
+        pushButton->setAutoFillBackground(false);
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	color: rgb(255, 255, 255);\n"
+"	background-color: #6D55FF;\n"
+"	border-radius: 15px; \n"
+"	font: 75 25pt \"Karla\" bold;\n"
+"	border: 2px;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"	background-color: #A597FF;\n"
+"}"));
+        pushButton->setFlat(false);
 
         retranslateUi(List_of_themes);
+
+        pushButton->setDefault(false);
+
 
         QMetaObject::connectSlotsByName(List_of_themes);
     } // setupUi
@@ -161,6 +180,7 @@ public:
         pushButton_2->setText(QString());
         pushButton_3->setText(QString());
         pushButton_4->setText(QString());
+        pushButton->setText(QApplication::translate("List_of_themes", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
     } // retranslateUi
 
 };
