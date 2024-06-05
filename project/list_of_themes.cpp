@@ -244,9 +244,26 @@ void List_of_themes::deleteRecord(QModelIndex index) {
     loadData(); // Загрузить данные после успешного удаления
 }
 void List_of_themes::editRecord(QModelIndex index) {
+    if (!index.isValid())
+        return;
+
+    // Получаем модель из QTableView
+    QAbstractItemModel *model = ui->tableView->model();
+
+    // Получаем данные из выделенной строки
+    QString projectName = model->data(model->index(index.row(), 0)).toString();
+    QString funding = model->data(model->index(index.row(), 1)).toString();
+    QString startDate = model->data(model->index(index.row(), 2)).toString();
+    QString endDate = model->data(model->index(index.row(), 3)).toString();
+    QString information = model->data(model->index(index.row(), 4)).toString();
+    QString stage = model->data(model->index(index.row(), 5)).toString();
+    QString students = model->data(model->index(index.row(), 6)).toString();
+    QString leaders = model->data(model->index(index.row(), 7)).toString();
+
     // Создаем форму редактирования и передаем туда данные
-    auto *change_t = new change_theme();  // Создать окно логина
-    change_t->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    auto *change_t = new change_theme();
+    change_t->setAttribute(Qt::WA_DeleteOnClose);
+    change_t->setData(projectName, funding, startDate, endDate, information, stage, students, leaders); // Передача данных в форму
     change_t->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }

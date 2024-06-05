@@ -49,7 +49,10 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+    void on_pushButton_clicked();
 
+public slots:
+    void setData(const QString &leaderName, const QString &leaderEmail, const QString &leaderPass);
 private:
     Ui::change_prof *ui;
     bool m_dragging = false;

@@ -113,8 +113,15 @@ void Add_theme::on_pushButton_clicked()
     QString funding = ui->lineEdit_6->text(); // QLineEdit для пароля
     QDate currentDate = QDate::currentDate();
     QString formattedDate = currentDate.toString("yyyy-MM-dd");
-    query.prepare("INSERT INTO projects (projectid, projectname, start_date, end_date, information, file, file_index, funding) "
-                  "VALUES (:projectid, :projectname, :start_date, NULL, :information, :file, :file_index, :funding)");
+
+    query.exec("SELECT MIN(stageid) FROM stages");
+    int minStageId = -1; // Стартуем с 1, если таблица пуста
+    if (query.next()) {
+        minStageId = query.value(0).toInt(); // Получаем следующий ID
+    }
+
+    query.prepare("INSERT INTO projects (projectid, projectname, start_date, end_date, information, file, file_index, funding, stageid) "
+                  "VALUES (:projectid, :projectname, :start_date, NULL, :information, :file, :file_index, :funding, :stageid)");
     query.bindValue(":projectid", projectID);
     query.bindValue(":projectname", projectName);
     query.bindValue(":start_date", formattedDate);
@@ -122,6 +129,8 @@ void Add_theme::on_pushButton_clicked()
     query.bindValue(":file", fileData);
     query.bindValue(":funding", funding);
     query.bindValue(":file_index", fileExtension);
+    query.bindValue(":stageid", minStageId);
+
 
     if (!query.exec()) {
         QMessageBox::critical(this, "Ошибка", "Не удалось добавить студента: " + query.lastError().text());

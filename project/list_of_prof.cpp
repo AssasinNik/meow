@@ -222,8 +222,23 @@ void list_of_prof::deleteRecord(QModelIndex index) {
 }
 void list_of_prof::editRecord(QModelIndex index) {
     // Создаем форму редактирования и передаем туда данные
+    // Создаем форму редактирования и передаем туда данные
+    if (!index.isValid())
+        return;
+
+    // Получаем модель из QTableView
+    QAbstractItemModel *model = ui->tableView->model();
+
+    // Получаем данные из выделенной строки
+    QString leaderName = model->data(model->index(index.row(), 0)).toString();
+    QString leaderEmail = model->data(model->index(index.row(), 1)).toString();
+    QString leaderPass = model->data(model->index(index.row(), 2)).toString();
+
+
+
     auto *change_t = new change_prof();  // Создать окно логина
     change_t->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    change_t->setData(leaderName, leaderEmail, leaderPass);
     change_t->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }

@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -29,16 +30,15 @@ public:
     QPushButton *pushButton_2;
     QLineEdit *lineEdit_2;
     QLineEdit *lineEdit_3;
-    QPushButton *pushButton_5;
     QSlider *horizontalSlider;
     QLabel *label_6;
     QLabel *label_3;
     QPushButton *pushButton;
     QLineEdit *lineEdit_6;
     QLabel *label_7;
-    QLabel *label_4;
     QLabel *label;
-    QLabel *label_8;
+    QLabel *label_4;
+    QComboBox *comboBox;
 
     void setupUi(QWidget *change_theme)
     {
@@ -102,28 +102,6 @@ public:
 "padding-right:10px;\n"
 "border: 2px solid #6D55FF;\n"
 ""));
-        pushButton_5 = new QPushButton(change_theme);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(20, 320, 251, 51));
-        QFont font;
-        font.setFamily(QString::fromUtf8("Karla 13"));
-        font.setPointSize(17);
-        font.setBold(false);
-        font.setItalic(false);
-        font.setWeight(9);
-        pushButton_5->setFont(font);
-        pushButton_5->setAutoFillBackground(false);
-        pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	color: rgb(255, 255, 255);\n"
-"	background-color: #6D55FF;\n"
-"	border-radius: 15px; \n"
-"	font: 75 17pt \"Karla\" bold;\n"
-"	border: 2px;\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	background-color: #A597FF;\n"
-"}"));
-        pushButton_5->setFlat(false);
         horizontalSlider = new QSlider(change_theme);
         horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
         horizontalSlider->setGeometry(QRect(520, 120, 361, 31));
@@ -197,26 +175,69 @@ public:
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
-        label_4 = new QLabel(change_theme);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(20, 280, 251, 31));
-        label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 75 18pt \"Karla\";\n"
-""));
         label = new QLabel(change_theme);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(210, 0, 511, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));
-        label_8 = new QLabel(change_theme);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(30, 390, 831, 21));
-        label_8->setStyleSheet(QString::fromUtf8("font: 75 11pt \"Karla\" bold;"));
+        label_4 = new QLabel(change_theme);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(520, 220, 151, 31));
+        label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 75 18pt \"Karla\";\n"
+""));
+        comboBox = new QComboBox(change_theme);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(520, 270, 361, 41));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"    border-radius: 15px; \n"
+"    font: 14pt \"Karla\";\n"
+"    padding-left: 10px;\n"
+"    padding-right:10px;\n"
+"    border: 2px solid #6D55FF;\n"
+"    color: black; /* Default text color - black */\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 20px;\n"
+"    border-left-width: 1px;\n"
+"    border-left-color: darkgray;\n"
+"    border-left-style: solid;\n"
+"    border-top-right-radius: 3px;\n"
+"    border-bottom-right-radius: 3px;\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow {\n"
+"    image: url(:/new/prefix1/combobox.png);\n"
+"    width: 20px;\n"
+"    height: 20px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 2px solid #6D55FF;\n"
+"    color: #6D55FF; /* Text color in the dropdown - purple */\n"
+"    background-color: white; \n"
+"}\n"
+"\n"
+"QComboBox:hover { /* Hover state - highlight with purple border */\n"
+"    border: 2px solid #6D55FF;\n"
+"}\n"
+"\n"
+"QComboBox:focus { /* Focus state - highlight wit"
+                        "h purple border */\n"
+"    border: 2px solid #6D55FF;\n"
+"}\n"
+"\n"
+"QComboBox:selected { /* Selected state - highlight with purple border */\n"
+"    border: 2px solid #6D55FF;\n"
+"    color: #6D55FF; /* Text color in the selected state - purple */\n"
+"}"));
 
         retranslateUi(change_theme);
 
-        pushButton_5->setDefault(false);
         pushButton->setDefault(false);
 
 
@@ -231,14 +252,12 @@ public:
         pushButton_3->setText(QString());
         pushButton_2->setText(QString());
         lineEdit_2->setText(QString());
-        pushButton_5->setText(QApplication::translate("change_theme", "\320\237\321\200\320\270\320\272\321\200\320\265\320\277\320\270\321\202\321\214", nullptr));
         label_6->setText(QApplication::translate("change_theme", "\320\244\320\270\320\275\320\260\320\275\321\201\320\270\321\200\320\276\320\262\320\260\320\275\320\270\320\265", nullptr));
         label_3->setText(QApplication::translate("change_theme", "\320\236\320\277\320\270\321\201\320\260\320\275\320\270\320\265", nullptr));
         pushButton->setText(QApplication::translate("change_theme", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", nullptr));
         label_7->setText(QApplication::translate("change_theme", "\342\202\275", nullptr));
-        label_4->setText(QApplication::translate("change_theme", "\320\237\321\200\320\270\320\272\321\200\320\265\320\277\320\270\321\202\321\214 \321\204\320\260\320\271\320\273", nullptr));
         label->setText(QApplication::translate("change_theme", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214 \321\202\320\265\320\274\321\203", nullptr));
-        label_8->setText(QString());
+        label_4->setText(QApplication::translate("change_theme", "\320\241\321\202\320\260\320\264\320\270\321\217", nullptr));
     } // retranslateUi
 
 };

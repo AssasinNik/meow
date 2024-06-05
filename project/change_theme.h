@@ -50,13 +50,14 @@ private slots:
 
     void on_pushButton_4_clicked();
 
-    void on_pushButton_5_clicked();
-
     void on_pushButton_clicked();
 
     void on_horizontalSlider_valueChanged(int value);
 
     void on_lineEdit_6_textChanged(const QString &text);
+
+public slots:
+    void setData(const QString &projectName, const QString &funding, const QString &startDate, const QString &endDate, const QString &information, const QString &stage, const QString &students, const QString &leaders);
 private:
     Ui::change_theme *ui;
     bool m_dragging = false;

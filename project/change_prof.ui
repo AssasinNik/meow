@@ -39,7 +39,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(109, 85, 255);
-font: 75 40pt &quot;Karla&quot; bold;
+font: 75 35pt &quot;Karla&quot; bold;
 font-weight: 500;</string>
    </property>
    <property name="text">
@@ -181,24 +181,6 @@ border: 2px solid #6D55FF;
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>130</y>
-     <width>361</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 15px; 
-font: 14pt &quot;Karla&quot;;
-padding-left: 10px;
-padding-right:10px;
-border: 2px solid #6D55FF;
-</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
@@ -294,24 +276,6 @@ QPushButton:pressed {
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>410</y>
-     <width>361</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius: 15px; 
-font: 14pt &quot;Karla&quot;;
-padding-left: 10px;
-padding-right:10px;
-border: 2px solid #6D55FF;
-</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
@@ -338,24 +302,6 @@ border: 2px solid #6D55FF;
     </size>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>370</y>
-     <width>161</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-font: 75 18pt &quot;Karla&quot;;
-</string>
-   </property>
-   <property name="text">
-    <string>Отчество</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
@@ -372,6 +318,62 @@ font: 75 18pt &quot;Karla&quot;;
    </property>
    <property name="text">
     <string>Учёное звание</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>130</y>
+     <width>361</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    border-radius: 15px; 
+    font: 14pt &quot;Karla&quot;;
+    padding-left: 10px;
+    padding-right:10px;
+    border: 2px solid #6D55FF;
+    color: black; /* Default text color - black */
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/new/prefix1/combobox.png);
+    width: 20px;
+    height: 20px;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid #6D55FF;
+    color: #6D55FF; /* Text color in the dropdown - purple */
+    background-color: white; 
+}
+
+QComboBox:hover { /* Hover state - highlight with purple border */
+    border: 2px solid #6D55FF;
+}
+
+QComboBox:focus { /* Focus state - highlight with purple border */
+    border: 2px solid #6D55FF;
+}
+
+QComboBox:selected { /* Selected state - highlight with purple border */
+    border: 2px solid #6D55FF;
+    color: #6D55FF; /* Text color in the selected state - purple */
+}</string>
    </property>
   </widget>
  </widget>

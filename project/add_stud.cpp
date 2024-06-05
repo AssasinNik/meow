@@ -44,7 +44,7 @@ void add_stud::on_pushButton_clicked()
         if (query.next()) {
             studentID = query.value(0).toInt() + 1; // Получаем следующий ID
         }
-        QString studentName = ui->lineEdit_3->text() + ui->lineEdit_2->text(); // QLineEdit для имени студента
+        QString studentName = ui->lineEdit_3->text() + " " + ui->lineEdit_2->text(); // QLineEdit для имени студента
         QString email = ui->lineEdit_5->text(); // QLineEdit для электронной почты
         QString password = ui->lineEdit_6->text(); // QLineEdit для пароля
 

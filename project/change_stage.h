@@ -43,12 +43,16 @@ protected:
             event->accept();
         }
     }
+public slots:
+    void setData(const QString &stageName, const QString &stageDesc, const QString &recommendLen, const QString &difficulty);
 private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::change_stage *ui;

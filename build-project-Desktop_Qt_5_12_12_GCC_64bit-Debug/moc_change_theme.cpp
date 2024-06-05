@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_change_theme_t {
-    QByteArrayData data[11];
-    char stringdata0[202];
+    QByteArrayData data[19];
+    char stringdata0[259];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,20 +36,29 @@ QT_MOC_LITERAL(1, 13, 23), // "on_pushButton_2_clicked"
 QT_MOC_LITERAL(2, 37, 0), // ""
 QT_MOC_LITERAL(3, 38, 23), // "on_pushButton_3_clicked"
 QT_MOC_LITERAL(4, 62, 23), // "on_pushButton_4_clicked"
-QT_MOC_LITERAL(5, 86, 23), // "on_pushButton_5_clicked"
-QT_MOC_LITERAL(6, 110, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(7, 132, 32), // "on_horizontalSlider_valueChanged"
-QT_MOC_LITERAL(8, 165, 5), // "value"
-QT_MOC_LITERAL(9, 171, 25), // "on_lineEdit_6_textChanged"
-QT_MOC_LITERAL(10, 197, 4) // "text"
+QT_MOC_LITERAL(5, 86, 21), // "on_pushButton_clicked"
+QT_MOC_LITERAL(6, 108, 32), // "on_horizontalSlider_valueChanged"
+QT_MOC_LITERAL(7, 141, 5), // "value"
+QT_MOC_LITERAL(8, 147, 25), // "on_lineEdit_6_textChanged"
+QT_MOC_LITERAL(9, 173, 4), // "text"
+QT_MOC_LITERAL(10, 178, 7), // "setData"
+QT_MOC_LITERAL(11, 186, 11), // "projectName"
+QT_MOC_LITERAL(12, 198, 7), // "funding"
+QT_MOC_LITERAL(13, 206, 9), // "startDate"
+QT_MOC_LITERAL(14, 216, 7), // "endDate"
+QT_MOC_LITERAL(15, 224, 11), // "information"
+QT_MOC_LITERAL(16, 236, 5), // "stage"
+QT_MOC_LITERAL(17, 242, 8), // "students"
+QT_MOC_LITERAL(18, 251, 7) // "leaders"
 
     },
     "change_theme\0on_pushButton_2_clicked\0"
     "\0on_pushButton_3_clicked\0"
-    "on_pushButton_4_clicked\0on_pushButton_5_clicked\0"
-    "on_pushButton_clicked\0"
+    "on_pushButton_4_clicked\0on_pushButton_clicked\0"
     "on_horizontalSlider_valueChanged\0value\0"
-    "on_lineEdit_6_textChanged\0text"
+    "on_lineEdit_6_textChanged\0text\0setData\0"
+    "projectName\0funding\0startDate\0endDate\0"
+    "information\0stage\0students\0leaders"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,18 +80,18 @@ static const uint qt_meta_data_change_theme[] = {
        3,    0,   50,    2, 0x08 /* Private */,
        4,    0,   51,    2, 0x08 /* Private */,
        5,    0,   52,    2, 0x08 /* Private */,
-       6,    0,   53,    2, 0x08 /* Private */,
-       7,    1,   54,    2, 0x08 /* Private */,
-       9,    1,   57,    2, 0x08 /* Private */,
+       6,    1,   53,    2, 0x08 /* Private */,
+       8,    1,   56,    2, 0x08 /* Private */,
+      10,    8,   59,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    8,
-    QMetaType::Void, QMetaType::QString,   10,
+    QMetaType::Void, QMetaType::Int,    7,
+    QMetaType::Void, QMetaType::QString,    9,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,   11,   12,   13,   14,   15,   16,   17,   18,
 
        0        // eod
 };
@@ -96,10 +105,10 @@ void change_theme::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 0: _t->on_pushButton_2_clicked(); break;
         case 1: _t->on_pushButton_3_clicked(); break;
         case 2: _t->on_pushButton_4_clicked(); break;
-        case 3: _t->on_pushButton_5_clicked(); break;
-        case 4: _t->on_pushButton_clicked(); break;
-        case 5: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 6: _t->on_lineEdit_6_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 3: _t->on_pushButton_clicked(); break;
+        case 4: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 5: _t->on_lineEdit_6_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 6: _t->setData((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4])),(*reinterpret_cast< const QString(*)>(_a[5])),(*reinterpret_cast< const QString(*)>(_a[6])),(*reinterpret_cast< const QString(*)>(_a[7])),(*reinterpret_cast< const QString(*)>(_a[8]))); break;
         default: ;
         }
     }

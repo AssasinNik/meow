@@ -221,32 +221,49 @@ font: 75 18pt &quot;Karla&quot;;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QComboBox{
-	border-radius: 15px; 
-	font: 14pt &quot;Karla&quot;;
-	padding-left: 10px;
-	padding-right:10px;
-	border: 2px solid #6D55FF;
+    <string notr="true">QComboBox {
+    border-radius: 15px; 
+    font: 14pt &quot;Karla&quot;;
+    padding-left: 10px;
+    padding-right:10px;
+    border: 2px solid #6D55FF;
+    color: black; /* Default text color - black */
 }
+
 QComboBox::drop-down {
-        subcontrol-origin: padding;
-        subcontrol-position: top right;
-        width: 20px;
-        border-left-width: 1px;
-        border-left-color: darkgray;
-        border-left-style: solid;
-        border-top-right-radius: 3px;
-         border-bottom-right-radius: 3px;
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
+
 QComboBox::down-arrow {
-        image: url(:/new/prefix1/combobox.png);
-		width:20px;
-		height:20px;
+    image: url(:/new/prefix1/combobox.png);
+    width: 20px;
+    height: 20px;
 }
+
 QComboBox QAbstractItemView {
     border: 2px solid #6D55FF;
-    color: #6D55FF;
+    color: #6D55FF; /* Text color in the dropdown - purple */
     background-color: white; 
+}
+
+QComboBox:hover { /* Hover state - highlight with purple border */
+    border: 2px solid #6D55FF;
+}
+
+QComboBox:focus { /* Focus state - highlight with purple border */
+    border: 2px solid #6D55FF;
+}
+
+QComboBox:selected { /* Selected state - highlight with purple border */
+    border: 2px solid #6D55FF;
+    color: #6D55FF; /* Text color in the selected state - purple */
 }</string>
    </property>
   </widget>

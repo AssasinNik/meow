@@ -32,8 +32,6 @@ public:
     QLineEdit *lineEdit_3;
     QLabel *label_2;
     QLabel *label_3;
-    QLabel *label_4;
-    QLineEdit *lineEdit_4;
     QLabel *label_6;
     QLabel *label_5;
     QLineEdit *lineEdit_2;
@@ -136,21 +134,6 @@ public:
         label_3->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
-        label_4 = new QLabel(change_student);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(30, 270, 161, 31));
-        label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 75 18pt \"Karla\";\n"
-""));
-        lineEdit_4 = new QLineEdit(change_student);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setGeometry(QRect(30, 310, 361, 41));
-        lineEdit_4->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
-"font: 14pt \"Karla\";\n"
-"padding-left: 10px;\n"
-"padding-right:10px;\n"
-"border: 2px solid #6D55FF;\n"
-""));
         label_6 = new QLabel(change_student);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(460, 180, 161, 31));
@@ -193,7 +176,6 @@ public:
         pushButton_2->setText(QString());
         label_2->setText(QApplication::translate("change_student", "\320\230\320\274\321\217", nullptr));
         label_3->setText(QApplication::translate("change_student", "\320\244\320\260\320\274\320\270\320\273\320\270\321\217", nullptr));
-        label_4->setText(QApplication::translate("change_student", "\320\236\321\202\321\207\320\265\321\201\321\202\320\262\320\276", nullptr));
         label_6->setText(QApplication::translate("change_student", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         label_5->setText(QApplication::translate("change_student", "\320\233\320\276\320\263\320\270\320\275", nullptr));
     } // retranslateUi

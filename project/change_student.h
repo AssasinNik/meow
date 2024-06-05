@@ -26,6 +26,8 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+    void on_pushButton_clicked();
+
 protected:
     void mousePressEvent(QMouseEvent *event) override {
         // Запомнить начальную позицию при нажатии на кнопку мыши
@@ -51,6 +53,8 @@ protected:
             event->accept();
         }
     }
+public slots:
+    void setData(const QString &studentName, const QString &email, const QString &user_password);
 private:
     Ui::change_student *ui;
     bool m_dragging = false;

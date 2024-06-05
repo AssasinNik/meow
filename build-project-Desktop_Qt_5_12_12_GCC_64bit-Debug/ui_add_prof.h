@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -31,14 +32,12 @@ public:
     QLineEdit *lineEdit_5;
     QLabel *label;
     QLineEdit *lineEdit_2;
-    QLabel *label_4;
     QLabel *label_5;
-    QLineEdit *lineEdit_4;
     QLabel *label_3;
     QPushButton *pushButton_4;
     QLineEdit *lineEdit_3;
     QLabel *label_7;
-    QLineEdit *lineEdit_7;
+    QComboBox *comboBox;
 
     void setupUi(QWidget *add_prof)
     {
@@ -117,9 +116,9 @@ public:
 ""));
         label = new QLabel(add_prof);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(80, 10, 761, 61));
+        label->setGeometry(QRect(100, 0, 751, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
-"font: 75 40pt \"Karla\" bold;\n"
+"font: 75 35pt \"Karla\" bold;\n"
 "font-weight: 500;"));
         lineEdit_2 = new QLineEdit(add_prof);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
@@ -130,26 +129,11 @@ public:
 "padding-right:10px;\n"
 "border: 2px solid #6D55FF;\n"
 ""));
-        label_4 = new QLabel(add_prof);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(30, 370, 161, 31));
-        label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 75 18pt \"Karla\";\n"
-""));
         label_5 = new QLabel(add_prof);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(460, 90, 161, 31));
         label_5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
-""));
-        lineEdit_4 = new QLineEdit(add_prof);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setGeometry(QRect(30, 410, 361, 41));
-        lineEdit_4->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
-"font: 14pt \"Karla\";\n"
-"padding-left: 10px;\n"
-"padding-right:10px;\n"
-"border: 2px solid #6D55FF;\n"
 ""));
         label_3 = new QLabel(add_prof);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -180,15 +164,54 @@ public:
         label_7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
 "font: 75 18pt \"Karla\";\n"
 ""));
-        lineEdit_7 = new QLineEdit(add_prof);
-        lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
-        lineEdit_7->setGeometry(QRect(30, 130, 361, 41));
-        lineEdit_7->setStyleSheet(QString::fromUtf8("border-radius: 15px; \n"
-"font: 14pt \"Karla\";\n"
-"padding-left: 10px;\n"
-"padding-right:10px;\n"
-"border: 2px solid #6D55FF;\n"
-""));
+        comboBox = new QComboBox(add_prof);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(30, 130, 361, 41));
+        comboBox->setStyleSheet(QString::fromUtf8("QComboBox {\n"
+"    border-radius: 15px; \n"
+"    font: 14pt \"Karla\";\n"
+"    padding-left: 10px;\n"
+"    padding-right:10px;\n"
+"    border: 2px solid #6D55FF;\n"
+"    color: black; /* Default text color - black */\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 20px;\n"
+"    border-left-width: 1px;\n"
+"    border-left-color: darkgray;\n"
+"    border-left-style: solid;\n"
+"    border-top-right-radius: 3px;\n"
+"    border-bottom-right-radius: 3px;\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow {\n"
+"    image: url(:/new/prefix1/combobox.png);\n"
+"    width: 20px;\n"
+"    height: 20px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    border: 2px solid #6D55FF;\n"
+"    color: #6D55FF; /* Text color in the dropdown - purple */\n"
+"    background-color: white; \n"
+"}\n"
+"\n"
+"QComboBox:hover { /* Hover state - highlight with purple border */\n"
+"    border: 2px solid #6D55FF;\n"
+"}\n"
+"\n"
+"QComboBox:focus { /* Focus state - highlight wit"
+                        "h purple border */\n"
+"    border: 2px solid #6D55FF;\n"
+"}\n"
+"\n"
+"QComboBox:selected { /* Selected state - highlight with purple border */\n"
+"    border: 2px solid #6D55FF;\n"
+"    color: #6D55FF; /* Text color in the selected state - purple */\n"
+"}"));
 
         retranslateUi(add_prof);
 
@@ -209,7 +232,6 @@ public:
         pushButton->setText(QApplication::translate("add_prof", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", nullptr));
         lineEdit_5->setText(QString());
         label->setText(QApplication::translate("add_prof", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\277\321\200\320\265\320\277\320\276\320\264\320\260\320\262\320\260\321\202\320\265\320\273\321\217", nullptr));
-        label_4->setText(QApplication::translate("add_prof", "\320\236\321\202\321\207\320\265\321\201\321\202\320\262\320\276", nullptr));
         label_5->setText(QApplication::translate("add_prof", "\320\233\320\276\320\263\320\270\320\275", nullptr));
         label_3->setText(QApplication::translate("add_prof", "\320\244\320\260\320\274\320\270\320\273\320\270\321\217", nullptr));
         pushButton_4->setText(QString());

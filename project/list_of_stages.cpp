@@ -185,8 +185,21 @@ void list_of_stages::deleteRecord(QModelIndex index) {
 }
 void list_of_stages::editRecord(QModelIndex index) {
     // Создаем форму редактирования и передаем туда данные
+    if (!index.isValid())
+        return;
+
+    // Получаем модель из QTableView
+    QAbstractItemModel *model = ui->tableView->model();
+
+    // Получаем данные из выделенной строки
+    QString stageName = model->data(model->index(index.row(), 0)).toString();
+    QString stageDesc = model->data(model->index(index.row(), 1)).toString();
+    QString recommendLen = model->data(model->index(index.row(), 2)).toString();
+    QString difficulty = model->data(model->index(index.row(), 3)).toString();
+
     auto *change_t = new change_stage();  // Создать окно логина
     change_t->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    change_t->setData(stageName, stageDesc, recommendLen, difficulty);
     change_t->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }
