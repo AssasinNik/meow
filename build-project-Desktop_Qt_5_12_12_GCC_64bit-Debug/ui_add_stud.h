@@ -48,7 +48,7 @@ public:
         add_stud->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label = new QLabel(add_stud);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(220, 0, 511, 61));
+        label->setGeometry(QRect(220, 0, 621, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));

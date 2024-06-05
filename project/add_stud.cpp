@@ -42,7 +42,10 @@ void add_stud::on_pushButton_clicked()
        QString lastName = ui->lineEdit_2->text().trimmed(); // QLineEdit для фамилии студента
        QString email = ui->lineEdit_5->text().trimmed(); // QLineEdit для электронной почты
        QString password = ui->lineEdit_6->text(); // QLineEdit для пароля
-
+       if (lastName.isEmpty() || firstName.isEmpty() || password.isEmpty() || email.isEmpty()) {
+           QMessageBox::warning(this, "Предупреждение", "Поля не должны быть пустыми.");
+           return;
+       }
        // Проверка имен и фамилий на наличие цифр
        QRegExp nameRegEx("[\\d]");
        if (nameRegEx.indexIn(firstName) != -1 || nameRegEx.indexIn(lastName) != -1) {
