@@ -87,6 +87,7 @@ void change_theme::setData(const QString &projectName, const QString &funding, c
 
       // Заполняем comboBox полученными stagename
       ui->comboBox->addItems(stageNames);
+      ui->comboBox->addItem("N/A");
 
       ui->comboBox->setCurrentText(stage);
 
@@ -103,6 +104,11 @@ void change_theme::on_pushButton_clicked()
         QString newDescription = ui->lineEdit_3->text();
         QString newFunding = ui->lineEdit_6->text();
         QString newStage = ui->comboBox->currentText();
+
+        if (ui->lineEdit_2->text().isEmpty() || newDescription.isEmpty() || newFunding.isEmpty() || newStage.isEmpty()) {
+            QMessageBox::warning(this, "Предупреждение", "Поля 'Информация', 'Стадия' и 'Финансирование' не должны быть пустыми.");
+            return;
+        }
 
         // Выполняем запрос на обновление данных в таблице projects
         QSqlQuery updateQuery;

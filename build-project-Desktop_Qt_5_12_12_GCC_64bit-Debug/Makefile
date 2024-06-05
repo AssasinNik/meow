@@ -834,8 +834,10 @@ qrc_greeting.cpp: ../project/greeting.qrc \
 		../project/Palette.png \
 		../project/greeting.png \
 		../project/return.png \
+		../project/Group-1.ico \
 		../project/spisok.png \
 		../project/Backpack.png \
+		../project/Group\ 1.png \
 		../project/combobox.png
 	/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/bin/rcc -name greeting ../project/greeting.qrc -o qrc_greeting.cpp
 
@@ -6457,6 +6459,165 @@ moc_professor_project.cpp: ../project/professor_project.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCore \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCoreDepends \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractproxymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractstate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstracttransition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qanimationgroup.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qarraydataops.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qarraydatapointer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbasictimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbitarray.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbuffer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbytearraymatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcache.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborarray.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborvalue.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdatetime.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborcommon.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qregularexpression.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/quuid.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcbormap.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborstream.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfloat16.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcollator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcommandlineoption.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcommandlineparser.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcryptographichash.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdeadlinetimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdir.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfileinfo.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdiriterator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qendian.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeventtransition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qexception.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfactoryinterface.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfileselector.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QObject \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QStringList \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfinalstate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuture.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfutureinterface.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qrunnable.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qresultstore.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuturewatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qhistorystate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qidentityproxymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qisenum.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonarray.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonvalue.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsondocument.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonobject.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlibrary.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlibraryinfo.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qversionnumber.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlinkedlist.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlockfile.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qloggingcategory.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmath.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmetaobject.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimedata.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimedatabase.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimetype.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpauseanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qplugin.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpointer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpluginloader.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qprocess.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qqueue.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qrandom.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qreadwritelock.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qresource.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsavefile.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qscopeguard.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsemaphore.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsettings.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsharedmemory.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsignalmapper.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsignaltransition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsocketnotifier.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstack.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstandardpaths.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstatemachine.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstorageinfo.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstringlistmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsystemsemaphore.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtemporarydir.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtemporaryfile.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtextcodec.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthread.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthreadpool.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthreadstorage.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimeline.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimezone.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtranslator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtypetraits.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qwineventnotifier.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qxmlstream.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtcoreversion.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QtSql \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QtSqlDepends \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlglobal.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsql-config.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldatabase.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldriver.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldriverplugin.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlerror.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlfield.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlindex.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrecord.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquery.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquerymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrelationaldelegate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qitemdelegate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qvalidator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qicon.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qslider.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstyle.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qframe.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcombobox.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrelationaltablemodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqltablemodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlresult.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlversion.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h \
 		moc_predefs.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/bin/moc
 	/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/bin/moc $(DEFINES) --include /home/cherenkov/Документы/GitHub/science_project/build-project-Desktop_Qt_5_12_12_GCC_64bit-Debug/moc_predefs.h -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/mkspecs/linux-g++ -I/home/cherenkov/Документы/GitHub/science_project/project -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtGui -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtSql -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtCore -I. -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../project/professor_project.h -o moc_professor_project.cpp
@@ -6784,6 +6945,165 @@ moc_student_project.cpp: ../project/student_project.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCore \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCoreDepends \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractproxymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractstate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstracttransition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qanimationgroup.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qarraydataops.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qarraydatapointer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbasictimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbitarray.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbuffer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbytearraymatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcache.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborarray.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborvalue.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdatetime.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborcommon.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qregularexpression.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/quuid.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcbormap.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborstream.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfloat16.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcollator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcommandlineoption.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcommandlineparser.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcryptographichash.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdeadlinetimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdir.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfileinfo.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdiriterator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qendian.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeventtransition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qexception.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfactoryinterface.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfileselector.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QObject \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QStringList \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfinalstate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuture.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfutureinterface.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qrunnable.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qresultstore.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuturewatcher.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qhistorystate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qidentityproxymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qisenum.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonarray.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonvalue.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsondocument.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonobject.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlibrary.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlibraryinfo.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qversionnumber.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlinkedlist.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlockfile.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qloggingcategory.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmath.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmetaobject.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimedata.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimedatabase.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimetype.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpauseanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qplugin.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpointer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpluginloader.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qprocess.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qqueue.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qrandom.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qreadwritelock.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qresource.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsavefile.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qscopeguard.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsemaphore.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsettings.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsharedmemory.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsignalmapper.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsignaltransition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsocketnotifier.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstack.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstandardpaths.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstatemachine.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstorageinfo.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstringlistmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsystemsemaphore.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtemporarydir.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtemporaryfile.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtextcodec.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthread.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthreadpool.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthreadstorage.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimeline.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimer.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimezone.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtranslator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtypetraits.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qwineventnotifier.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qxmlstream.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtcoreversion.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QtSql \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QtSqlDepends \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlglobal.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsql-config.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldatabase.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldriver.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldriverplugin.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlerror.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlfield.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlindex.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrecord.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquery.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquerymodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrelationaldelegate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qitemdelegate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qvalidator.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qicon.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qslider.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstyle.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qframe.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcombobox.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrelationaltablemodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqltablemodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlresult.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlversion.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h \
 		moc_predefs.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/bin/moc
 	/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/bin/moc $(DEFINES) --include /home/cherenkov/Документы/GitHub/science_project/build-project-Desktop_Qt_5_12_12_GCC_64bit-Debug/moc_predefs.h -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/mkspecs/linux-g++ -I/home/cherenkov/Документы/GitHub/science_project/project -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtGui -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtSql -I/home/cherenkov/Qt5.12.12/5.12.12/gcc_64/include/QtCore -I. -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../project/student_project.h -o moc_student_project.cpp
@@ -7370,6 +7690,12 @@ add_prof.o: ../project/add_prof.cpp ../project/add_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QRegExpValidator \
 		ui_add_prof.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QComboBox \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
 		../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar
@@ -7856,6 +8182,13 @@ add_stage.o: ../project/add_stage.cpp ../project/add_stage.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QRegExpValidator \
 		ui_add_stage.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QComboBox \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTextEdit \
 		../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar
@@ -8342,6 +8675,11 @@ add_stud.o: ../project/add_stud.cpp ../project/add_stud.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QRegExpValidator \
 		ui_add_stud.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
 		../project/list_of_students.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar
@@ -9326,6 +9664,12 @@ change_prof.o: ../project/change_prof.cpp ../project/change_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QRegExpValidator \
 		ui_change_prof.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QComboBox \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
 		../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar
@@ -9812,6 +10156,13 @@ change_stage.o: ../project/change_stage.cpp ../project/change_stage.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QRegExpValidator \
 		ui_change_stage.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QComboBox \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTextEdit \
 		../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar
@@ -10298,9 +10649,15 @@ change_student.o: ../project/change_student.cpp ../project/change_student.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QRegExpValidator \
 		ui_change_student.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
 		../project/list_of_students.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
+		../project/role_type.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o change_student.o ../project/change_student.cpp
 
 change_theme.o: ../project/change_theme.cpp ../project/change_theme.h \
@@ -10784,14 +11141,15 @@ change_theme.o: ../project/change_theme.cpp ../project/change_theme.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QRegExpValidator \
 		ui_change_theme.h \
-		../project/add_theme.h \
-		ui_add_theme.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QComboBox \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QSlider \
+		../project/add_theme.h \
+		ui_add_theme.h \
 		../project/list_of_themes.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
@@ -11564,6 +11922,22 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h \
 		ui_list_of_prof.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
 		../project/add_theme.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QtWidgets \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QtWidgetsDepends \
@@ -11597,8 +11971,6 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericmatrix.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericpluginfactory.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qiconengine.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qiconengineplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qimageiohandler.h \
@@ -11666,12 +12038,9 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextlist.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtexttable.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtguiversion.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaccessiblewidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaction.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qboxlayout.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -11684,7 +12053,6 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcolormap.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcolumnview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcommandlinkbutton.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcompleter.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdatawidgetmapper.h \
@@ -11722,13 +12090,11 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollarea.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgroupbox.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qinputdialog.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlineedit.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qitemeditorfactory.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qkeyeventtransition.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qkeysequenceedit.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlcdnumber.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistwidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmainwindow.h \
@@ -11751,7 +12117,6 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollerProperties \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollerproperties.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QMetaType \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qshortcut.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qsizegrip.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qspinbox.h \
@@ -11765,7 +12130,6 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstylepainter.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstyleplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qsystemtrayicon.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtablewidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextbrowser.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtoolbar.h \
@@ -11790,10 +12154,8 @@ list_of_prof.o: ../project/list_of_prof.cpp ../project/list_of_prof.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QDebug \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QSqlQuery \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QStandardItemModel \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
 		../project/role_type.h \
 		../project/greeting.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QVBoxLayout \
 		../project/sgreeting.h \
 		../project/pgreeting.h \
@@ -12065,6 +12427,22 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h \
 		ui_list_of_stages.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
 		../project/add_theme.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QtWidgets \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QtWidgetsDepends \
@@ -12098,8 +12476,6 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericmatrix.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericpluginfactory.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qiconengine.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qiconengineplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qimageiohandler.h \
@@ -12167,12 +12543,9 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextlist.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtexttable.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtguiversion.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaccessiblewidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaction.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qboxlayout.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -12185,7 +12558,6 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcolormap.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcolumnview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcommandlinkbutton.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcompleter.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdatawidgetmapper.h \
@@ -12223,13 +12595,11 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollarea.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgroupbox.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qinputdialog.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlineedit.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qitemeditorfactory.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qkeyeventtransition.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qkeysequenceedit.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlcdnumber.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistwidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmainwindow.h \
@@ -12252,7 +12622,6 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollerProperties \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollerproperties.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QMetaType \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qshortcut.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qsizegrip.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qspinbox.h \
@@ -12266,7 +12635,6 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstylepainter.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstyleplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qsystemtrayicon.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtablewidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextbrowser.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtoolbar.h \
@@ -12291,10 +12659,8 @@ list_of_stages.o: ../project/list_of_stages.cpp ../project/list_of_stages.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QDebug \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QSqlQuery \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QStandardItemModel \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
 		../project/role_type.h \
 		../project/greeting.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QVBoxLayout \
 		../project/sgreeting.h \
 		../project/pgreeting.h \
@@ -12566,6 +12932,22 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h \
 		ui_list_of_students.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
 		../project/add_stud.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QtWidgets \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QtWidgetsDepends \
@@ -12599,8 +12981,6 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericmatrix.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qgenericpluginfactory.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qiconengine.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qiconengineplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qimageiohandler.h \
@@ -12668,12 +13048,9 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextlist.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtexttable.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtguiversion.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaccessiblewidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaction.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qboxlayout.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -12686,7 +13063,6 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcolormap.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcolumnview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcommandlinkbutton.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qcompleter.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdatawidgetmapper.h \
@@ -12724,13 +13100,11 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgraphicsview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollarea.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgroupbox.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qinputdialog.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlineedit.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qitemeditorfactory.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qkeyeventtransition.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qkeysequenceedit.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlcdnumber.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistwidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmainwindow.h \
@@ -12753,7 +13127,6 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollerProperties \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollerproperties.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QMetaType \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qshortcut.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qsizegrip.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qspinbox.h \
@@ -12767,7 +13140,6 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstylepainter.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstyleplugin.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qsystemtrayicon.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtablewidget.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextbrowser.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtoolbar.h \
@@ -12791,10 +13163,8 @@ list_of_students.o: ../project/list_of_students.cpp ../project/list_of_students.
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QDebug \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QSqlQuery \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QStandardItemModel \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
 		../project/role_type.h \
 		../project/greeting.h \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QVBoxLayout \
 		../project/sgreeting.h \
 		../project/pgreeting.h \
@@ -13302,6 +13672,8 @@ list_of_themes.o: ../project/list_of_themes.cpp ../project/list_of_themes.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QSqlQuery \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QStandardItemModel \
 		../project/role_type.h \
+		../project/student_project.h \
+		../project/professor_project.h \
 		../project/change_theme.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o list_of_themes.o ../project/list_of_themes.cpp
 
@@ -13451,7 +13823,10 @@ login.o: ../project/login.cpp ../project/login.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlerror.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QDebug \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/QSqlQuery \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquery.h
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquery.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMessageBox \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmessagebox.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../project/login.cpp
 
 main.o: ../project/main.cpp ../project/mainwindow.h \
@@ -14469,8 +14844,6 @@ professor_project.o: ../project/professor_project.cpp ../project/professor_proje
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
-		ui_professor_project.h \
-		../project/list_of_themes.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCore \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCoreDepends \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractanimation.h \
@@ -14629,7 +15002,30 @@ professor_project.o: ../project/professor_project.cpp ../project/professor_proje
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlversion.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h \
+		ui_professor_project.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
+		../project/list_of_themes.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QStandardItemModel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qstandarditemmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMessageBox \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmessagebox.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o professor_project.o ../project/professor_project.cpp
 
 role.o: ../project/role.cpp ../project/role.h \
@@ -15170,8 +15566,6 @@ student_project.o: ../project/student_project.cpp ../project/student_project.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent \
-		ui_student_project.h \
-		../project/list_of_themes.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCore \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCoreDepends \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractanimation.h \
@@ -15330,7 +15724,30 @@ student_project.o: ../project/student_project.cpp ../project/student_project.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlversion.h \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QTimer \
 		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QScrollBar \
-		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qscrollbar.h \
+		ui_student_project.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QIcon \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QHeaderView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableView \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h \
+		../project/list_of_themes.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/QStandardItemModel \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtGui/qstandarditemmodel.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMessageBox \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmessagebox.h \
+		../../../../Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o student_project.o ../project/student_project.cpp
 
 qrc_greeting.o: qrc_greeting.cpp 

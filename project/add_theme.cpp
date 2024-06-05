@@ -102,22 +102,30 @@ void Add_theme::on_horizontalSlider_valueChanged(int value)
 
 void Add_theme::on_pushButton_clicked()
 {
+    QString projectName = ui->lineEdit_2->text().trimmed();
+    QString information = ui->lineEdit_3->text().trimmed();
+    QString funding = ui->lineEdit_6->text().trimmed();
+
+    // Проверка на пустые или несодержательные строки
+    if (projectName.isEmpty() || information.isEmpty() || funding.isEmpty()) {
+        QMessageBox::warning(this, "Предупреждение", "Поля 'Название проекта', 'Информация', 'Финансирование' не должны быть пустыми.");
+        return;
+    }
+
     QSqlQuery query;
     query.exec("SELECT MAX(projectid) FROM projects");
     int projectID = 1; // Стартуем с 1, если таблица пуста
     if (query.next()) {
         projectID = query.value(0).toInt() + 1; // Получаем следующий ID
     }
-    QString projectName = ui->lineEdit_2->text(); // QLineEdit для имени студента
-    QString information = ui->lineEdit_3->text(); // QLineEdit для электронной почты
-    QString funding = ui->lineEdit_6->text(); // QLineEdit для пароля
+
     QDate currentDate = QDate::currentDate();
     QString formattedDate = currentDate.toString("yyyy-MM-dd");
 
     query.exec("SELECT MIN(stageid) FROM stages");
-    int minStageId = -1; // Стартуем с 1, если таблица пуста
+    int minStageId = -1;
     if (query.next()) {
-        minStageId = query.value(0).toInt(); // Получаем следующий ID
+        minStageId = query.value(0).toInt();
     }
 
     query.prepare("INSERT INTO projects (projectid, projectname, start_date, end_date, information, file, file_index, funding, stageid) "
@@ -127,25 +135,27 @@ void Add_theme::on_pushButton_clicked()
     query.bindValue(":start_date", formattedDate);
     query.bindValue(":information", information);
     query.bindValue(":file", fileData);
-    query.bindValue(":funding", funding);
     query.bindValue(":file_index", fileExtension);
+    query.bindValue(":funding", funding);
     query.bindValue(":stageid", minStageId);
 
-
     if (!query.exec()) {
-        QMessageBox::critical(this, "Ошибка", "Не удалось добавить студента: " + query.lastError().text());
+        QMessageBox::critical(this, "Ошибка", "Не удалось добавить проект: " + query.lastError().text());
+        return;
     } else {
         QMessageBox::information(this, "Успешно", "Проект успешно добавлен.");
     }
+
+    // Окно после добавления проекта
     if(IS_TABLE == true){
         IS_TABLE=false;
-        auto *list = new List_of_themes();  // Создать окно логина
+        auto *list = new List_of_themes();  // Создать окно списка тем
         list->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
         list->show();
         this->close(); // Скрываем текущее окно вместо закрытия
     }
     else{
-        auto *greet = new pgreeting();  // Создать окно логина
+        auto *greet = new pgreeting();  // Создать окно приветствия
         greet->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
         greet->show();
         this->close(); // Скрываем текущее окно вместо закрытия

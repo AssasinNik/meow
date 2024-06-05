@@ -144,7 +144,7 @@ border: 2px solid #6D55FF;
     <rect>
      <x>220</x>
      <y>0</y>
-     <width>511</width>
+     <width>581</width>
      <height>61</height>
     </rect>
    </property>
@@ -168,7 +168,7 @@ font-weight: 500;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 0);
-font: 75 18pt &quot;Karla&quot;;
+font: 75 15pt &quot;Karla&quot;;
 </string>
    </property>
    <property name="text">

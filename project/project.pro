@@ -87,3 +87,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     greeting.qrc
+
+ICON = :/new/prefix1/Group-1.ico

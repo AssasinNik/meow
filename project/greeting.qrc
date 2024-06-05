@@ -7,5 +7,8 @@
         <file>Backpack.png</file>
         <file>Book.png</file>
         <file>Palette.png</file>
+        <file>Group-1.ico</file>
+        <file>Group 1.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

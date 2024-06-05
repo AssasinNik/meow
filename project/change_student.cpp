@@ -70,28 +70,40 @@ void change_student::setData(const QString &studentName, const QString &email, c
 }
 void change_student::on_pushButton_clicked()
 {
-    IS_TABLE=false;
-    // Получаем новые значения описания, финансирования и стадии
+    IS_TABLE = false;
 
-        QString newPassword = ui->lineEdit_6->text();
-        QString newLogin = ui->lineEdit_5->text();
+    QString newPassword = ui->lineEdit_6->text().trimmed();
+    QString newLogin = ui->lineEdit_5->text().trimmed();
 
-        // Выполняем запрос на обновление данных в таблице projects
-        QSqlQuery updateQuery;
-        updateQuery.prepare("UPDATE students SET user_password = :description WHERE email = :projectName");
-        updateQuery.bindValue(":description", newPassword);
-        updateQuery.bindValue(":projectName", newLogin);
+    // Проверка на минимальную длину пароля
+    if (newPassword.length() < 6) {
+        QMessageBox::warning(this, "Слишком короткий пароль", "Пароль должен содержать не менее 6 символов.");
+        return;
+    }
 
-        if (updateQuery.exec()) {
-            qDebug() << "Данные успешно обновлены";
-            QMessageBox::information(this, "Успех", "Данные успешно обновлены");
-        } else {
-            qDebug() << "Ошибка обновления данных:" << updateQuery.lastError().text();
-            QMessageBox::critical(this, "Ошибка", "Ошибка при обновлении данных: " + updateQuery.lastError().text());
-        }
-    auto *list = new list_of_students();  // Создать окно логина
+    // Проверка, что email соответствует формату электронной почты
+    QRegExp emailRegEx("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b");
+    if (!emailRegEx.exactMatch(newLogin)) {
+        QMessageBox::warning(this, "Некорректный email", "Введите корректный адрес электронной почты.");
+        return;
+    }
+
+    // Выполняем запрос на обновление данных в таблице Students
+    QSqlQuery updateQuery;
+    updateQuery.prepare("UPDATE Students SET User_Password = :password WHERE Email = :email");
+    updateQuery.bindValue(":password", newPassword);
+    updateQuery.bindValue(":email", newLogin);
+
+    if (!updateQuery.exec()) {
+        qDebug() << "Ошибка обновления данных:" << updateQuery.lastError().text();
+        QMessageBox::critical(this, "Ошибка", "Ошибка при обновлении данных: " + updateQuery.lastError().text());
+    } else {
+        qDebug() << "Данные успешно обновлены";
+        QMessageBox::information(this, "Успех", "Данные успешно обновлены");
+    }
+
+    auto *list = new list_of_students();  // Создать окно списка студентов
     list->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
     list->show();
     this->close(); // Скрываем текущее окно вместо закрытия
 }
-

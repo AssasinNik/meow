@@ -78,16 +78,42 @@ void change_prof::on_pushButton_4_clicked()
 void change_prof::on_pushButton_clicked()
 {
     QString newUchZv = ui->comboBox->currentText();
-    QString name = ui->lineEdit_2->text();
-    QString surname = ui->lineEdit_3->text();
-    QString newleaderPass =  ui->lineEdit_6->text();
-    QString newleaderLogin = ui->lineEdit_5->text();
+    QString name = ui->lineEdit_2->text().trimmed();
+    QString surname = ui->lineEdit_3->text().trimmed();
+    QString newleaderPass = ui->lineEdit_6->text().trimmed();
+    QString newleaderLogin = ui->lineEdit_5->text().trimmed();
 
-    // Выполняем запрос на обновление данных в таблице projects
+    // Проверка на пустые поля
+    if (newUchZv.isEmpty() || surname.isEmpty() || newleaderLogin.isEmpty()) {
+        QMessageBox::warning(this, "Недостаточно данных", "Все поля должны быть заполнены.");
+        return;
+    }
+
+    // Проверка на недопустимые символы в имени и фамилии
+    QRegExp nameRegex("^[a-zA-Zа-яА-Я\\s-]+$");
+    if (!nameRegex.exactMatch(name) || !nameRegex.exactMatch(surname)) {
+        QMessageBox::warning(this, "Некорректные данные", "Имя и фамилия должны содержать только буквы.");
+        return;
+    }
+
+    // Проверка длины пароля
+    if (newleaderPass.length() < 6) {
+        QMessageBox::warning(this, "Слишком короткий пароль", "Пароль должен содержать не менее 6 символов.");
+        return;
+    }
+
+    // Проверка формата электронной почты
+    QRegExp emailRegEx("\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b");
+    if (!emailRegEx.exactMatch(newleaderLogin)) {
+        QMessageBox::warning(this, "Некорректный email", "Введите корректный адрес электронной почты.");
+        return;
+    }
+
+    // Выполнение запроса на обновление данных
     QSqlQuery updateQuery;
-    updateQuery.prepare("UPDATE leaders SET user_password = :pass, leadername = :name WHERE email = :login");
+    updateQuery.prepare("UPDATE Leaders SET User_Password = :pass, LeaderName = :name WHERE Email = :login");
     updateQuery.bindValue(":pass", newleaderPass);
-    updateQuery.bindValue(":name", newUchZv+ " " +name+ " " +surname);
+    updateQuery.bindValue(":name", newUchZv + " " + name + " " + surname);
     updateQuery.bindValue(":login", newleaderLogin);
 
     if (updateQuery.exec()) {
@@ -98,9 +124,9 @@ void change_prof::on_pushButton_clicked()
         QMessageBox::critical(this, "Ошибка", "Ошибка при обновлении данных: " + updateQuery.lastError().text());
     }
 
-    auto *list = new list_of_prof();  // Создать окно логина
-    list->setAttribute(Qt::WA_DeleteOnClose); // Установить атрибут для автоматического удаления при закрытии
+    auto *list = new list_of_prof();
+    list->setAttribute(Qt::WA_DeleteOnClose);
     list->show();
-    this->close(); // Скрываем текущее окно вместо закрытия
+    this->close();
 }
 

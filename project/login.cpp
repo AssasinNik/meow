@@ -9,6 +9,7 @@
 #include <QSqlError>
 #include <QDebug>
 #include <QSqlQuery>
+#include <QMessageBox>
 #include "iostream"
 
 login::login(QWidget *parent) :
@@ -48,55 +49,70 @@ void login::on_pushButton_4_clicked()
 void login::on_pushButton_clicked()
 {
     if(IS_ADMIN == true){
-        QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-        db.setHostName("localhost");
-        db.setDatabaseName("science");
-        db.setUserName("admin_user");
-        db.setPassword("adminPass");
-        if (!db.open()) {
-            std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+        if(ui->lineEdit_2->text() == "admin_user" && ui->lineEdit_3->text() == "adminPass"){
+            QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+            db.setHostName("localhost");
+            db.setDatabaseName("science");
+            db.setUserName("admin_user");
+            db.setPassword("adminPass");
+            if (!db.open()) {
+                std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+            }
+            else{
+                std::cout << "Соединение с базой данных установлено" << std::endl;
+            }
+            auto *greeting = new Greeting();
+            greeting->setAttribute(Qt::WA_DeleteOnClose);
+            greeting->show();
+            this->close();
         }
         else{
-            std::cout << "Соединение с базой данных установлено" << std::endl;
+            QMessageBox::critical(this, "Ошибка", "Неверный логин или пароль");
         }
-        auto *greeting = new Greeting();
-        greeting->setAttribute(Qt::WA_DeleteOnClose);
-        greeting->show();
-        this->close();
     }
     else if(IS_STUDENT == true){
-        QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-        db.setHostName("localhost");
-        db.setDatabaseName("science");
-        db.setUserName("uni_student");
-        db.setPassword("studentPass");
-        if (!db.open()) {
-            std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+        if(ui->lineEdit_2->text() == "uni_student" && ui->lineEdit_3->text() == "studentPass"){
+            QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+            db.setHostName("localhost");
+            db.setDatabaseName("science");
+            db.setUserName("uni_student");
+            db.setPassword("studentPass");
+            if (!db.open()) {
+                std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+            }
+            else{
+                std::cout << "Соединение с базой данных установлено" << std::endl;
+            }
+            auto *greeting = new sgreeting();
+            greeting->setAttribute(Qt::WA_DeleteOnClose);
+            greeting->show();
+            this->close();
         }
         else{
-            std::cout << "Соединение с базой данных установлено" << std::endl;
+            QMessageBox::critical(this, "Ошибка", "Неверный логин или пароль");
         }
-        auto *greeting = new sgreeting();
-        greeting->setAttribute(Qt::WA_DeleteOnClose);
-        greeting->show();
-        this->close();
     }
     else if(IS_PROFESSOR == true){
-        QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
-        db.setHostName("localhost");
-        db.setDatabaseName("science");
-        db.setUserName("professor");
-        db.setPassword("professorPass");
-        if (!db.open()) {
-            std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+        if(ui->lineEdit_2->text() == "professor" && ui->lineEdit_3->text() == "professorPass"){
+            QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL");
+            db.setHostName("localhost");
+            db.setDatabaseName("science");
+            db.setUserName("professor");
+            db.setPassword("professorPass");
+            if (!db.open()) {
+                std::cerr << "Не удалось открыть соединение с базой данных" << std::endl;
+            }
+            else{
+                std::cout << "Соединение с базой данных установлено" << std::endl;
+            }
+            auto *greeting = new pgreeting();
+            greeting->setAttribute(Qt::WA_DeleteOnClose);
+            greeting->show();
+            this->close();
         }
         else{
-            std::cout << "Соединение с базой данных установлено" << std::endl;
+            QMessageBox::critical(this, "Ошибка", "Неверный логин или пароль");
         }
-        auto *greeting = new pgreeting();
-        greeting->setAttribute(Qt::WA_DeleteOnClose);
-        greeting->show();
-        this->close();
     }
 }
 

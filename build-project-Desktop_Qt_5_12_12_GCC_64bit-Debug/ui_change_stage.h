@@ -98,7 +98,7 @@ public:
 ""));
         label = new QLabel(change_stage);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(220, 0, 511, 61));
+        label->setGeometry(QRect(220, 0, 581, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
 "font: 75 40pt \"Karla\" bold;\n"
 "font-weight: 500;"));
@@ -106,7 +106,7 @@ public:
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(470, 90, 411, 31));
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"font: 75 18pt \"Karla\";\n"
+"font: 75 15pt \"Karla\";\n"
 ""));
         lineEdit_2 = new QLineEdit(change_stage);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
