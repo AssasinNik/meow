@@ -25,8 +25,6 @@ list_of_students::list_of_students(QWidget *parent) :
 
     if(IS_PROFESSOR==true || IS_STUDENT==true){
         ui->pushButton->close();
-        connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
-                this, SLOT(customMenuRequested(QPoint)));
         ui->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
         ui->tableView->verticalHeader()->hide();
         ui->tableView->verticalHeader()->setVisible(false);
@@ -66,8 +64,10 @@ list_of_students::list_of_students(QWidget *parent) :
         }
     }
     else{
-        connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
-                this, SLOT(customMenuRequested(QPoint)));
+        if(!IS_STUDENT){
+            connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
+                    this, SLOT(customMenuRequested(QPoint)));
+        }
         ui->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
         ui->tableView->verticalHeader()->hide();
         ui->tableView->verticalHeader()->setVisible(false);

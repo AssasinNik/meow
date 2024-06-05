@@ -22,8 +22,10 @@ list_of_stages::list_of_stages(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
-            this, SLOT(customMenuRequested(QPoint)));
+    if(!IS_STUDENT || !IS_PROFESSOR){
+        connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
+                this, SLOT(customMenuRequested(QPoint)));
+    }
     ui->tableView->setContextMenuPolicy(Qt::CustomContextMenu);
     ui->tableView->verticalHeader()->hide();
     ui->tableView->verticalHeader()->setVisible(false);

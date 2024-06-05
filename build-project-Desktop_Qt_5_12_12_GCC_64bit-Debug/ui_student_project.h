@@ -142,7 +142,7 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(90, 0, 761, 61));
         label->setStyleSheet(QString::fromUtf8("color: rgb(109, 85, 255);\n"
-"font: 75 35pt \"Karla\" bold;\n"
+"font: 75 30pt \"Karla\" bold;\n"
 "font-weight: 500;"));
         pushButton = new QPushButton(student_project);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));

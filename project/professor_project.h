@@ -3,6 +3,10 @@
 
 #include <QWidget>
 #include <QMouseEvent>
+#include <QtCore>
+#include <QtSql>
+#include <QTimer>
+#include <QScrollBar>
 
 namespace Ui {
 class professor_project;
@@ -46,7 +50,10 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+    void on_pushButton_clicked();
 
+public slots:
+    void setData(const QString &projectName);
 private:
     Ui::professor_project *ui;
     bool m_dragging = false;

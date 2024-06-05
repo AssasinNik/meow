@@ -135,15 +135,15 @@ QScrollBar::sub-line:vertical {
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>140</x>
      <y>0</y>
-     <width>721</width>
+     <width>701</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(109, 85, 255);
-font: 75 30pt &quot;Karla&quot; bold;
+font: 75 28pt &quot;Karla&quot; bold;
 font-weight: 500;</string>
    </property>
    <property name="text">

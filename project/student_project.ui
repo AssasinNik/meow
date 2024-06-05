@@ -166,7 +166,7 @@ QPushButton:pressed {
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(109, 85, 255);
-font: 75 35pt &quot;Karla&quot; bold;
+font: 75 30pt &quot;Karla&quot; bold;
 font-weight: 500;</string>
    </property>
    <property name="text">

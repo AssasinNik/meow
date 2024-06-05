@@ -11,6 +11,8 @@
 #include <QSqlQuery>
 #include <QStandardItemModel>
 #include "role_type.h"
+#include "student_project.h"
+#include "professor_project.h"
 #include "change_theme.h"
 #include <QTableView>
 #include <iostream>
@@ -88,8 +90,10 @@ List_of_themes::List_of_themes(QWidget *parent) :
         // Установка модели в TableView
         ui->tableView->setModel(model);
     }
-    connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
-            this, SLOT(customMenuRequested(QPoint)));
+    if(!IS_STUDENT){
+        connect(ui->tableView, SIGNAL(customContextMenuRequested(QPoint)),
+                this, SLOT(customMenuRequested(QPoint)));
+    }
 }
 
 List_of_themes::~List_of_themes()
@@ -177,9 +181,44 @@ void List_of_themes::loadData() {
 }
 void List_of_themes::addStudent(QModelIndex index) {
     // Логика для добавления студента
+
+    if (!index.isValid())
+        return;
+
+    // Получаем модель из QTableView
+    QAbstractItemModel *model = ui->tableView->model();
+
+    // Получаем данные из выделенной строки
+    QString projectName = model->data(model->index(index.row(), 0)).toString();
+
+    // Создаем форму редактирования и передаем туда данные
+    auto *sp = new student_project();
+    sp->setAttribute(Qt::WA_DeleteOnClose);
+    sp->setData(projectName); // Передача данных в форму
+    sp->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+
 }
 void List_of_themes::addProfessor(QModelIndex index) {
     // Логика для добавления преподавателя
+
+    if (!index.isValid())
+        return;
+
+    // Получаем модель из QTableView
+    QAbstractItemModel *model = ui->tableView->model();
+
+    // Получаем данные из выделенной строки
+    QString projectName = model->data(model->index(index.row(), 0)).toString();
+
+
+    // Создаем форму редактирования и передаем туда данные
+    auto *change_t = new professor_project();
+    change_t->setAttribute(Qt::WA_DeleteOnClose);
+    change_t->setData(projectName); // Передача данных в форму
+    change_t->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+
 }
 void List_of_themes::deleteRecord(QModelIndex index) {
     if (!index.isValid())
@@ -285,29 +324,46 @@ void List_of_themes::customMenuRequested(QPoint pos) {
             "    color: #FFFFFF; /* Белый текст */"
             "}"
         );
+    if(!IS_PROFESSOR){
+        QAction *deleteAction = new QAction("Удалить", this);
+            QAction *editAction = new QAction("Изменить", this);
+            QAction *addStudentAction = new QAction("Добавить студента к проекту", this);
+            QAction *addProfessorAction = new QAction("Добавить преподавателя к проекту", this);
 
-    QAction *deleteAction = new QAction("Удалить", this);
-        QAction *editAction = new QAction("Изменить", this);
-        QAction *addStudentAction = new QAction("Добавить студента к проекту", this);
-        QAction *addProfessorAction = new QAction("Добавить преподавателя к проекту", this);
+            menu->addAction(deleteAction);
+            menu->addAction(editAction);
+            menu->addAction(addStudentAction);
+            menu->addAction(addProfessorAction);
 
-        menu->addAction(deleteAction);
-        menu->addAction(editAction);
-        menu->addAction(addStudentAction);
-        menu->addAction(addProfessorAction);
+            connect(deleteAction, &QAction::triggered, [this, index]() {
+                deleteRecord(index);
+            });
+            connect(editAction, &QAction::triggered, [this, index]() {
+                editRecord(index);
+            });
+            connect(addStudentAction, &QAction::triggered, [this, index]() {
+                addStudent(index);
+            });
+            connect(addProfessorAction, &QAction::triggered, [this, index]() {
+                addProfessor(index);
+            });
+    }
+    else{
+        QAction *deleteAction = new QAction("Удалить", this);
+            QAction *editAction = new QAction("Изменить", this);
 
-        connect(deleteAction, &QAction::triggered, [this, index]() {
-            deleteRecord(index);
-        });
-        connect(editAction, &QAction::triggered, [this, index]() {
-            editRecord(index);
-        });
-        connect(addStudentAction, &QAction::triggered, [this, index]() {
-            addStudent(index);
-        });
-        connect(addProfessorAction, &QAction::triggered, [this, index]() {
-            addProfessor(index);
-        });
+            menu->addAction(deleteAction);
+            menu->addAction(editAction);
+
+            connect(deleteAction, &QAction::triggered, [this, index]() {
+                deleteRecord(index);
+            });
+            connect(editAction, &QAction::triggered, [this, index]() {
+                editRecord(index);
+            });
+    }
+
+
 
         menu->popup(ui->tableView->viewport()->mapToGlobal(pos));
 }
