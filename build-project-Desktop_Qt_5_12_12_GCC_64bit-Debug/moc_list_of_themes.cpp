@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_List_of_themes_t {
-    QByteArrayData data[17];
-    char stringdata0[239];
+    QByteArrayData data[18];
+    char stringdata0[252];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -47,7 +47,8 @@ QT_MOC_LITERAL(12, 176, 10), // "addStudent"
 QT_MOC_LITERAL(13, 187, 12), // "addProfessor"
 QT_MOC_LITERAL(14, 200, 13), // "deleteStudent"
 QT_MOC_LITERAL(15, 214, 15), // "deleteProfessor"
-QT_MOC_LITERAL(16, 230, 8) // "loadData"
+QT_MOC_LITERAL(16, 230, 12), // "finishRecord"
+QT_MOC_LITERAL(17, 243, 8) // "loadData"
 
     },
     "List_of_themes\0on_pushButton_2_clicked\0"
@@ -56,7 +57,7 @@ QT_MOC_LITERAL(16, 230, 8) // "loadData"
     "customMenuRequested\0pos\0editRecord\0"
     "QModelIndex\0index\0deleteRecord\0"
     "addStudent\0addProfessor\0deleteStudent\0"
-    "deleteProfessor\0loadData"
+    "deleteProfessor\0finishRecord\0loadData"
 };
 #undef QT_MOC_LITERAL
 
@@ -66,7 +67,7 @@ static const uint qt_meta_data_List_of_themes[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -74,18 +75,19 @@ static const uint qt_meta_data_List_of_themes[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   74,    2, 0x08 /* Private */,
-       3,    0,   75,    2, 0x08 /* Private */,
-       4,    0,   76,    2, 0x08 /* Private */,
-       5,    0,   77,    2, 0x08 /* Private */,
-       6,    1,   78,    2, 0x0a /* Public */,
-       8,    1,   81,    2, 0x0a /* Public */,
-      11,    1,   84,    2, 0x0a /* Public */,
-      12,    1,   87,    2, 0x0a /* Public */,
-      13,    1,   90,    2, 0x0a /* Public */,
-      14,    1,   93,    2, 0x0a /* Public */,
-      15,    1,   96,    2, 0x0a /* Public */,
-      16,    0,   99,    2, 0x0a /* Public */,
+       1,    0,   79,    2, 0x08 /* Private */,
+       3,    0,   80,    2, 0x08 /* Private */,
+       4,    0,   81,    2, 0x08 /* Private */,
+       5,    0,   82,    2, 0x08 /* Private */,
+       6,    1,   83,    2, 0x0a /* Public */,
+       8,    1,   86,    2, 0x0a /* Public */,
+      11,    1,   89,    2, 0x0a /* Public */,
+      12,    1,   92,    2, 0x0a /* Public */,
+      13,    1,   95,    2, 0x0a /* Public */,
+      14,    1,   98,    2, 0x0a /* Public */,
+      15,    1,  101,    2, 0x0a /* Public */,
+      16,    1,  104,    2, 0x0a /* Public */,
+      17,    0,  107,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -93,6 +95,7 @@ static const uint qt_meta_data_List_of_themes[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QPoint,    7,
+    QMetaType::Void, 0x80000000 | 9,   10,
     QMetaType::Void, 0x80000000 | 9,   10,
     QMetaType::Void, 0x80000000 | 9,   10,
     QMetaType::Void, 0x80000000 | 9,   10,
@@ -121,7 +124,8 @@ void List_of_themes::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 8: _t->addProfessor((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
         case 9: _t->deleteStudent((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
         case 10: _t->deleteProfessor((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
-        case 11: _t->loadData(); break;
+        case 11: _t->finishRecord((*reinterpret_cast< QModelIndex(*)>(_a[1]))); break;
+        case 12: _t->loadData(); break;
         default: ;
         }
     }
@@ -156,13 +160,13 @@ int List_of_themes::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 13;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
+        if (_id < 13)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 12;
+        _id -= 13;
     }
     return _id;
 }

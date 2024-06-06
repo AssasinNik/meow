@@ -325,6 +325,34 @@ void List_of_themes::deleteRecord(QModelIndex index) {
     QSqlDatabase::database().commit();
     loadData(); // Загрузить данные после успешного удаления
 }
+void List_of_themes::finishRecord(QModelIndex index) {
+    if (!index.isValid())
+        return;
+
+    int row = index.row();
+    QString projectName = ui->tableView->model()->index(row, 0).data().toString(); // Предположим, что имя проекта находится во второй колонке
+
+    qDebug() << "Project Name: " << projectName;
+
+    QSqlDatabase::database().transaction();
+    QSqlQuery query;
+
+    QDate currentDate = QDate::currentDate();
+    QString formattedDate = currentDate.toString("yyyy-MM-dd");
+
+    // Получаем ID проекта по его названию
+    query.prepare("UPDATE projects SET end_date = :date WHERE projectname = :projectName");
+    query.bindValue(":projectName", projectName);
+    query.bindValue(":date", formattedDate);
+    if (!query.exec()) {
+        qDebug() << "Ошибка при получении ProjectID: " << query.lastError().text();
+        QSqlDatabase::database().rollback();
+        return;
+    }
+
+    QSqlDatabase::database().commit();
+    loadData(); // Загрузить данные после успешного удаления
+}
 void List_of_themes::editRecord(QModelIndex index) {
     if (!index.isValid())
         return;
@@ -374,6 +402,8 @@ void List_of_themes::customMenuRequested(QPoint pos) {
             QAction *addProfessorAction = new QAction("Добавить преподавателя к проекту", this);
             QAction *deleteProfessorAction = new QAction("Удалить преподавателя из проекта", this);
             QAction *deleteStudentAction = new QAction("Удалить студента из проекта", this);
+            QAction *finishAction = new QAction("Завершить", this);
+
 
             menu->addAction(deleteAction);
             menu->addAction(editAction);
@@ -381,6 +411,7 @@ void List_of_themes::customMenuRequested(QPoint pos) {
             menu->addAction(addProfessorAction);
             menu->addAction(deleteProfessorAction);
             menu->addAction(deleteStudentAction);
+             menu->addAction(finishAction);
 
             connect(deleteAction, &QAction::triggered, [this, index]() {
                 deleteRecord(index);
@@ -400,19 +431,27 @@ void List_of_themes::customMenuRequested(QPoint pos) {
             connect(deleteStudentAction, &QAction::triggered, [this, index]() {
                 deleteStudent(index);
             });
+            connect(finishAction, &QAction::triggered, [this, index]() {
+                finishRecord(index);
+            });
     }
     else{
         QAction *deleteAction = new QAction("Удалить", this);
             QAction *editAction = new QAction("Изменить", this);
+            QAction *finishAction = new QAction("Завершить", this);
 
             menu->addAction(deleteAction);
             menu->addAction(editAction);
+            menu->addAction(finishAction);
 
             connect(deleteAction, &QAction::triggered, [this, index]() {
                 deleteRecord(index);
             });
             connect(editAction, &QAction::triggered, [this, index]() {
                 editRecord(index);
+            });
+            connect(finishAction, &QAction::triggered, [this, index]() {
+                finishRecord(index);
             });
     }
 
