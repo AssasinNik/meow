@@ -17,6 +17,8 @@ SOURCES += \
     change_stage.cpp \
     change_student.cpp \
     change_theme.cpp \
+    delete_pp.cpp \
+    delete_sp.cpp \
     greeting.cpp \
     list_of_prof.cpp \
     list_of_stages.cpp \
@@ -42,6 +44,8 @@ HEADERS += \
     change_stage.h \
     change_student.h \
     change_theme.h \
+    delete_pp.h \
+    delete_sp.h \
     greeting.h \
     list_of_prof.h \
     list_of_stages.h \
@@ -66,6 +70,8 @@ FORMS += \
     change_stage.ui \
     change_student.ui \
     change_theme.ui \
+    delete_pp.ui \
+    delete_sp.ui \
     greeting.ui \
     list_of_prof.ui \
     list_of_stages.ui \

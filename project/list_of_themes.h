@@ -59,6 +59,8 @@ public slots:
     void deleteRecord(QModelIndex index);
     void addStudent(QModelIndex index);
     void addProfessor(QModelIndex index);
+    void deleteStudent(QModelIndex index);
+    void deleteProfessor(QModelIndex index);
     void loadData();
 private:
     Ui::List_of_themes *ui;

@@ -12,6 +12,8 @@
 #include <QStandardItemModel>
 #include "role_type.h"
 #include "student_project.h"
+#include "delete_pp.h"
+#include "delete_sp.h"
 #include "professor_project.h"
 #include "change_theme.h"
 #include <QTableView>
@@ -220,6 +222,47 @@ void List_of_themes::addProfessor(QModelIndex index) {
     this->close(); // Скрываем текущее окно вместо закрытия
 
 }
+void List_of_themes::deleteStudent(QModelIndex index) {
+    // Логика для добавления студента
+
+    if (!index.isValid())
+        return;
+
+    // Получаем модель из QTableView
+    QAbstractItemModel *model = ui->tableView->model();
+
+    // Получаем данные из выделенной строки
+    QString projectName = model->data(model->index(index.row(), 0)).toString();
+
+    // Создаем форму редактирования и передаем туда данные
+    auto *sp = new delete_sp();
+    sp->setAttribute(Qt::WA_DeleteOnClose);
+    sp->setData(projectName); // Передача данных в форму
+    sp->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+
+}
+void List_of_themes::deleteProfessor(QModelIndex index) {
+    // Логика для добавления преподавателя
+
+    if (!index.isValid())
+        return;
+
+    // Получаем модель из QTableView
+    QAbstractItemModel *model = ui->tableView->model();
+
+    // Получаем данные из выделенной строки
+    QString projectName = model->data(model->index(index.row(), 0)).toString();
+
+
+    // Создаем форму редактирования и передаем туда данные
+    auto *change_t = new delete_pp();
+    change_t->setAttribute(Qt::WA_DeleteOnClose);
+    change_t->setData(projectName); // Передача данных в форму
+    change_t->show();
+    this->close(); // Скрываем текущее окно вместо закрытия
+
+}
 void List_of_themes::deleteRecord(QModelIndex index) {
     if (!index.isValid())
         return;
@@ -329,11 +372,15 @@ void List_of_themes::customMenuRequested(QPoint pos) {
             QAction *editAction = new QAction("Изменить", this);
             QAction *addStudentAction = new QAction("Добавить студента к проекту", this);
             QAction *addProfessorAction = new QAction("Добавить преподавателя к проекту", this);
+            QAction *deleteProfessorAction = new QAction("Удалить преподавателя из проекта", this);
+            QAction *deleteStudentAction = new QAction("Удалить студента из проекта", this);
 
             menu->addAction(deleteAction);
             menu->addAction(editAction);
             menu->addAction(addStudentAction);
             menu->addAction(addProfessorAction);
+            menu->addAction(deleteProfessorAction);
+            menu->addAction(deleteStudentAction);
 
             connect(deleteAction, &QAction::triggered, [this, index]() {
                 deleteRecord(index);
@@ -346,6 +393,12 @@ void List_of_themes::customMenuRequested(QPoint pos) {
             });
             connect(addProfessorAction, &QAction::triggered, [this, index]() {
                 addProfessor(index);
+            });
+            connect(deleteProfessorAction, &QAction::triggered, [this, index]() {
+                deleteProfessor(index);
+            });
+            connect(deleteStudentAction, &QAction::triggered, [this, index]() {
+                deleteStudent(index);
             });
     }
     else{
